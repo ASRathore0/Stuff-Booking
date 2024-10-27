@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #26272d;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header h1 {
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.auth-buttons {
+    float: right;
+}
+
+.auth-buttons .button {
+    background: #046c9f;
+    color: #fff;
+    padding: 4px 15px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.hero {
+    background: #046c9f;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cta-button {
+    background: #fff;
+    color: #046c9f;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features, .testimonials {
+    padding: 50px 0;
+    text-align: center;
+    background: #ececec;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    header h1, nav ul, .auth-buttons {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: non; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal input[type="email"],
+.modal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px; /* Space between inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.modal input[type="email"]:focus,
+.modal input[type="password"]:focus {
+    border-color: #3498db; /* Change border color on focus */
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background: #2980b9; /* Darken button on hover */
+}
+
+.modal p {
+    margin-top: 15px;
+}
+
+.modal a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.modal a:hover {
+    text-decoration: underline;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.items {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.item-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Adjust width based on the number of items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.book-button {
+    background: #046c9f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background: #d35400; /* Darken button on hover */
+}
+
+.vendor-submission {
+    display: none;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.vendor-submission form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.vendor-submission label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.vendor-submission input,
+.vendor-submission textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.vendor-submission button {
+    background: #2ecc71; /* Green color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vendor-submission button:hover {
+    background: #27ae60; /* Darken button on hover */
+}
+
+/* For search section */
+.search-section {
+    padding: 50px 0;
+    text-align: center;
+    background: #ececec;
+     
+}
+
+.location-search {
+    margin-bottom: 30px;
+}
+
+.location-button {
+    background-color: #046c9f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.location-button:hover {
+    background-color: #2980b9;
+}
+
+#manualLocation {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.available-stuff {
+    margin-top: 20px;
+}
+
+.vendor-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.vendor-item h3 {
+    color: #2ecc71;
+}
+
+/* category */
+
+.category-filter {
+    margin: 20px 0;
+}
+
+.category-filter select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* profile */
+/* Profile Icon Styles */
+.profile-icon {
+    position: absolute;
+    top: 5px;
+    right: 70px;
+}
+
+.profile-icon a {
+    font-size: 35px;
+    color: #ebf1f5;
+    text-decoration: none;
+}
+
+.profile-icon a:hover {
+    color: #7ab9e9;
+}
+
+/* Styling for the Profile Section (as in the previous code) */
+.profile-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    display: none;
+    
+}
+
+.profile-section h2 {
+    margin-bottom: 20px;
+    color: #2ecc71;
+}
+
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section form div {
+    margin-bottom: 15px;
+}
+
+.profile-section form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.profile-section form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#saveProfileBtn {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#saveProfileBtn:hover {
+    background-color: #2980b9;
+}
+
