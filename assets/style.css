@@ -96,29 +96,34 @@ footer {
         display: block;
         margin: 10px 0;
     }
+
+    .container {
+        width: 95%; /* Increase width on smaller screens */
+    }
 }
 
 /* Modal styles */
 .modal {
-    display: non; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; /* Corrected from 'non' */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 400px; /* Could be more or less, depending on screen size */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    width: 90%; /* Use percentage for responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .modal h2 {
@@ -136,7 +141,7 @@ footer {
 .modal input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 10px 0 20px; /* Space between inputs */
+    margin: 10px 0 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     transition: border-color 0.3s;
@@ -144,13 +149,13 @@ footer {
 
 .modal input[type="email"]:focus,
 .modal input[type="password"]:focus {
-    border-color: #3498db; /* Change border color on focus */
+    border-color: #3498db;
 }
 
 .modal button {
     width: 100%;
     padding: 10px;
-    background: #3498db; /* Blue color */
+    background: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
@@ -159,7 +164,7 @@ footer {
 }
 
 .modal button:hover {
-    background: #2980b9; /* Darken button on hover */
+    background: #2980b9;
 }
 
 .modal p {
@@ -174,7 +179,6 @@ footer {
 .modal a:hover {
     text-decoration: underline;
 }
-
 
 .close {
     color: #aaa;
@@ -206,13 +210,13 @@ footer {
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    width: 30%; /* Adjust width based on the number of items */
+    width: calc(33% - 40px); /* Responsive width with margin */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
 .item:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
 }
 
 .item img {
@@ -230,7 +234,7 @@ footer {
 }
 
 .book-button:hover {
-    background: #d35400; /* Darken button on hover */
+    background: #d35400;
 }
 
 .vendor-submission {
@@ -264,7 +268,7 @@ footer {
 }
 
 .vendor-submission button {
-    background: #2ecc71; /* Green color */
+    background: #2ecc71;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -273,15 +277,14 @@ footer {
 }
 
 .vendor-submission button:hover {
-    background: #27ae60; /* Darken button on hover */
+    background: #27ae60;
 }
 
-/* For search section */
+/* Search section */
 .search-section {
     padding: 50px 0;
     text-align: center;
     background: #ececec;
-     
 }
 
 .location-search {
@@ -308,7 +311,8 @@ footer {
     font-size: 18px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 300px;
+    width: calc(100% - 20px); /* Full width with padding */
+    max-width: 300px; /* Max width for larger screens */
     margin-right: 10px;
 }
 
@@ -328,8 +332,7 @@ footer {
     color: #2ecc71;
 }
 
-/* category */
-
+/* Category */
 .category-filter {
     margin: 20px 0;
 }
@@ -341,8 +344,7 @@ footer {
     border-radius: 5px;
 }
 
-/* profile */
-/* Profile Icon Styles */
+/* Profile */
 .profile-icon {
     position: absolute;
     top: 5px;
@@ -359,7 +361,6 @@ footer {
     color: #7ab9e9;
 }
 
-/* Styling for the Profile Section (as in the previous code) */
 .profile-section {
     padding: 40px;
     background-color: #f9f9f9;
@@ -368,7 +369,6 @@ footer {
     max-width: 600px;
     margin: 50px auto;
     display: none;
-    
 }
 
 .profile-section h2 {
@@ -414,3 +414,37 @@ footer {
     background-color: #2980b9;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .item {
+        width: calc(50% - 40px); /* Two items per row */
+    }
+
+    .vendor-item {
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90%; /* More responsive modal width */
+    }
+
+    #manualLocation {
+        width: 100%; /* Full width input on smaller screens */
+        margin: 10px 0; /* Add margin for better spacing */
+    }
+
+    .location-button {
+        width: 100%; /* Full width button */
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%; /* Stack items on very small screens */
+    }
+
+    .profile-section {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
