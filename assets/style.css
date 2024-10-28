@@ -52,6 +52,51 @@ nav ul li a {
     border-radius: 7px;
 }
 
+.toggle-button{
+
+    display: none;
+    position: absolute;
+    top: 35px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        display: none; /* Hide by default */
+        width: 100%; /* Full width on mobile */
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav ul li {
+        margin: 0px 0; /* Space between vertical items */
+        text-align:; /* Center text for mobile */
+    }
+
+    .auth-buttons {
+        margin-top:; /* Add spacing for mobile */
+        display: none;
+    }
+
+     .toggle-button {
+        display:block; /* Show toggle button */
+        margin-left: auto; /* Align to the right */
+        margin-right: 15px; /* Add some space from the right */
+        font-size: 30px;
+        line-height: 0;
+        margin-bottom: ;
+         
+    }
+}
+
 .hero {
     background: #046c9f;
     color: #fff;
@@ -357,6 +402,28 @@ footer {
     text-decoration: none;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-icon {
+        right: 20px; /* Move closer on smaller screens */
+    }
+
+    .profile-icon a {
+        font-size: 35px; /* Slightly smaller icon size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-icon {
+        top: 10px; /* Adjust top position for very small screens */
+        right: 15px; /* Further reduce right margin */
+    }
+
+    .profile-icon a {
+        font-size: 35px; /* Smaller size for very small screens */
+    }
+}
+
 .profile-icon a:hover {
     color: #7ab9e9;
 }
@@ -445,6 +512,16 @@ footer {
     }
 
     .profile-section {
-        padding: 20px; /* Reduce padding for smaller screens */
+        padding: 30px; /* Reduce padding for smaller screens */
+         
+    }
+
+    .profile-icon {
+        padding-left: 30px;
     }
 }
+
+
+
+
+ 
