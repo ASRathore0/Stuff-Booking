@@ -521,6 +521,79 @@ footer {
     }
 }
 
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #cec0c0;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0073b1; /* Change to a color that matches your branding */
+}
+
+/* Basic styling for the footer */
+#contact {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Styling for contact info */
+#contact p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0073b1; /* Matches LinkedIn blue, adjust to your brand colors */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact p {
+        font-size: 0.9em;
+    }
+    .social-icons a {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #contact p, .social-icons a {
+        font-size: 1em;
+    }
+}
 
 
 
