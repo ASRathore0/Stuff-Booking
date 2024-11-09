@@ -587,11 +587,11 @@ footer {
 
 @media (max-width: 480px) {
     .social-icons {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
     #contact p, .social-icons a {
-        font-size: 1em;
+        font-size: 2em;
     }
 }
 
