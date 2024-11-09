@@ -590,8 +590,8 @@ footer {
         flex-direction: row;
         gap: 10px;
     }
-    #contact p, .social-icons a {
-        font-size: 2em;
+    .social-icons a {
+        font-size: 1.7em;
     }
 }
 
