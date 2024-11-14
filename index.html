@@ -1,291 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="bookingyard-icon" href="/image/icon.ico">
-    <meta name="Description" content="Book your day to day on door services with BookingYard.in . It is a Indian booking on door service plateform that have thousands of happy Customer. Click here to book services...">
-    <meta name="keywords" content="Bookingyard, bookingyards, booking, bookmyshow, booking yard, founder of bookingyard, bookingyard comapany">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>BookingYard.in</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM14t3zKZsZ7REk6I1vjz4QuF5bUD7ZfzDG1Hq" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="bookingyard-icon" href="/image/icon.ico.jpg">
+        <meta name="Description" content="Book your day to day on door services with BookingYard.in . It is Indian on door service plateform that have thousands of happy Customer.">
+        <meta name="keywords" content="Bookingyard, bookingyard.in, booking.com, bookmyshow, booking yard, founder of bookingyard, bookingyard comapany">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/style.css">
+        <title>BookingYard.in</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-</head>
+    </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>BookingYard.in</h1>
-            <nav>
-                <div class="toggle-button" id="toggle-button">
-                    &#9776; <!-- Hamburger icon -->
-                </div>
-                <ul id="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#help">Help & Support</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="#signinModel" class="button">Sign In</a>
-            </div>
-        </div>
-    </header>
-    
+  <!-- Header Section -->
+  <header>
+    <div class="logo">BookingYard.in</div>
+    <button class="cta" onclick="showNoticeBoard()">Get App</button>
+    <button class="toggle-button" onclick="toggleMenu()">☰</button>
+  </header>
 
-    <!-- Include Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+  <a href="/assets/about.html">About Us</a>
+  <a href="/assets/other.html">F&Q</a>
+  <a href="/assets/login.html">Help & Support</a>
+  <a href="/assets/hiring.html">We are hiring</a>
+  <!-- Add more links as needed -->
+</div>
+  
 
-<nav>
-    <ul>
-        <li><a href="#" id="homeBtn"></a></li>
-        <li><a href="#" id="locationBtn"></a></li>
-    </ul>
-    <div class="profile-icon">
-        <a href="profileSection" id="profileIcon"><i class="fas fa-user-circle"></i></a>
+  <!-- Notice Board Modal -->
+<div id="notice-board" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeNoticeBoard()">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Thank you for showing your interest. The app is about to launch soon. Stay tuned!</p>
     </div>
-</nav>
+  </div>
 
-<section id="profileSection" class="profile-section">
-    <h2>Your Profile</h2>
-    <form id="profileForm">
-        <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" value="John Doe" />
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="johndoe@example.com" />
-        </div>
-        <div>
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" value="123-456-7890" />
-        </div>
-        <div>
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" value="123 Main Street, Ludhiana" />
-        </div>
-        <button type="button" id="saveProfileBtn">Save Changes</button>
-    </form>
+  <!-- Pop-up Message Structure -->
+<div id="popupMessage" class="popup hidden">
+  <div class="popup-content">
+    <p>We apologize for any inconvenience caused. We are working to improve your experience on BookingYard.in.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script>
+  // Show the pop-up message after 5 seconds
+  setTimeout(() => {
+    document.getElementById('popupMessage').classList.remove('hidden');
+  }, 5000);
+
+  // Function to close the pop-up
+  function closePopup() {
+    document.getElementById('popupMessage').classList.add('hidden');
+  }
+</script>
+ 
+
+  <section class="hero" id="home">
+    <div class="container">
+        <h2>Book Anything, Anytime</h2>
+        <p>Find what you need today!</p>
+        <!-- <a href="#features" class="cta-button">Get Started</a> -->
+    </div>
+</section>
+
+<section class="search-section">
+    <h2>Find Service Near You</h2>
+    <div class="location-search">
+        <input type="text" id="manualLocation" placeholder="Enter your location" />
+        <button id="locationBtn" class="location-button">Use My Current Location</button>
+    </div>
+    
+    <div class="category-filter">
+        <label for="category">Choose a category:</label>
+        <select id="category">
+            <option value="all">All</opltion>
+            <option value="TentHouse">Tent House</option>
+            <option value="Vehical">Vehical</option>
+            <option value="Halwai">Halwai</option>
+            <option value="Waiter">Waiter</option>
+            <option value="Decoratore">Decoratore</option>
+            <option value="photographer">Photographer or Videographer</option>
+        </select>
+    </div>
+    
+    <div id="availableStuff" class="available-stuff"></div>
 </section>
 
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h2>Book Anything, Anytime</h2>
-            <p>Find what you need today!</p>
-            <p>Note: Site is under construction! Sorry for the inconvenience.</p>
-            <!-- <a href="#features" class="cta-button">Get Started</a> -->
-        </div>
-    </section>
 
-    <section class="search-section">
-        <h2>Find Service Near You</h2>
-        <div class="location-search">
-            <input type="text" id="manualLocation" placeholder="Enter your location" />
-            <button id="locationBtn" class="location-button">Use My Current Location</button>
+<!-- <section class="features" id="features">
+    <div class="container">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>For Customers</h3>
+            <p>Browse and book a variety of items with ease.</p>
         </div>
-        
-        <div class="category-filter">
-            <label for="category">Choose a category:</label>
-            <select id="category">
-                <option value="all">All</opltion>
-                <option value="TentHouse">Tent House</option>
-                <option value="Vehical">Vehical</option>
-                <option value="Halwai">Halwai</option>
-                <option value="Waiter">Waiter</option>
-                <option value="Decoratore">Decoratore</option>
-                <option value="photographer">Photographer or Videographer</option>
-            </select>
+        <div class="feature">
+            <h3>For Vendors</h3>
+            <p>Create an account and list your items for booking.</p>
         </div>
-        
-        <div id="availableStuff" class="available-stuff"></div>
-    </section>
-    
-    
-
-    <!-- <section class="features" id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="feature">
-                <h3>For Customers</h3>
-                <p>Browse and book a variety of items with ease.</p>
-            </div>
-            <div class="feature">
-                <h3>For Vendors</h3>
-                <p>Create an account and list your items for booking.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <section class="items" id="items">
-        <div class="container">
-            <h2>Browse Service</h2>
-            <div class="item-list">
-                <div class="item">
-                    <img src="/image/tent.jpeg" alt="Item 1">
-                    <h3>Munna Tent House</h3>
-                    <p>Description of item 1. Great for your needs!</p>
-                    <button class="book-button" onclick="bookItem('Item 1')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/waiter.jpeg" alt="Item 2">
-                    <h3>RK Waiter Group</h3>
-                    <p>Description of item 2. Useful for various purposes!</p>
-                    <button class="book-button" onclick="bookItem('Item 2')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/car.jpeg" alt="Item 3">
-                    <h3>Uk Vahical Service</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/halwai.jpeg" alt="Item 3">
-                    <h3>Halwai Wala</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/bhagda.jpeg" alt="Item 3">
-                    <h3>Punjabi Bhagda Group</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/dj.jpeg" alt="Item 3">
-                    <h3>Sarjan DJ</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/decoration.jpeg" alt="Item 3">
-                    <h3>Jai Decoration</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/photo.jpeg" alt="Item 3">
-                    <h3>SK Photographer</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/electition.webp" alt="Item 3">
-                    <h3>Electrician</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/plumber.avif" alt="Item 3">
-                    <h3>Plumber Service</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/teacher.jpeg" alt="Item 3">
-                    <h3>Home Tution Teacher</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <div class="item">
-                    <img src="/image/contract.jpeg" alt="Item 3">
-                    <h3>Contracter</h3>
-                    <p>Description of item 3. Perfect for your requirements!</p>
-                    <button class="book-button" onclick="bookItem('Item 3')">Book Now</button>
-                </div>
-                <!-- Add more items as needed -->
-            </div>
-        </div>
-    </section>
-
-    <section class="vendor-submission" id="vendor-submission">
-        <div class="container">
-            <h2>Vendor Item Submission</h2>
-            <form id="vendorForm">
-                <label for="vendor-name">Vendor Name:</label>
-                <input type="text" id="vendor-name" required>
-                <label for="item-name">Item Name:</label>
-                <input type="text" id="item-name" required>
-                <label for="item-description">Item Description:</label>
-                <textarea id="item-description" required></textarea>
-                <label for="item-image">Item Image URL:</label>
-                <input type="url" id="item-image" required>
-                <button type="submit">Submit Item</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>What Our Users Say</h2>
-            <blockquote>
-                <p>"An amazing platform! I found exactly what I needed."</p>
-                <cite>- Happy Customer</cite>
-            </blockquote>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <p>Contact us at: support@bookingyard.in</a></p>
-            <p>Follow us on social media!</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/bookingyard-in/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://x.com/bookingyardIN" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>  
-                </a>
-                <a href="https://www.facebook.com/bookingyard" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i> 
-                </a>
-                 
-            </div>
-        </div>
-    </footer>
-
-      <!-- Sign In Modal -->
-<div id="signinModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('signinModal')">&times;</span>
-        <h2>Sign In</h2>
- <form id="signInForm">
-            <label for="signIn-email">Email:</label>
-            <input type="email" id="signIn-email" required>
-            <label for="signIn-password">Password:</label>
-            <input type="password" id="signIn-password" required>
-            <button type="submit">Sign In</button>
-            <p>Don't have an account? <a href="javascript:void(0);" onclick="openModal('registerModal')">Register here</a></p>
-        </form>
     </div>
-</div>
+</section> -->
 
-<!-- Registration Modal -->
-<div id="registerModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('registerModal')">&times;</span>
-        <h2>Register</h2>
-         <form id="registerForm">
-            <label>
-                <input type="radio" name="userType" value="user" checked> User
-            </label>
-            <label>
-                <input type="radio" name="userType" value="vendor"> Vendor
-            </label>
-            <br><br>
-            <label for="reg-email">Email:</label>
-            <input type="email" id="reg-email" required>
-            <label for="reg-password">Password:</label>
-            <input type="password" id="reg-password" required>
-            <label for="reg-confirm-password">Confirm Password:</label>
-            <input type="password" id="reg-confirm-password" required>
-            <button type="submit">Register</button>
-            <p>Already have an account? <a href="javascript:void(0);" onclick="openModal('signInModal')">Sign In here</a></p>
-        </form>
+<section class="items" id="items">
+  <div class="container">
+    <h2>Browse Services</h2>
+    <div class="item-list">
+      <!-- First 4 items shown initially -->
+      <div class="item">
+        <img src="/image/tent.jpeg" alt="Munna Tent House">
+        <h3>Munna Tent House</h3>
+        <button class="book-button" onclick="bookItem('Munna Tent House')">Get Details</button>
+      </div>
+      <div class="item">
+        <img src="/image/waiter.jpeg" alt="RK Waiter Group">
+        <h3>RK Waiter Group</h3>
+        <button class="book-button" onclick="bookItem('RK Waiter Group')">Get Details</button>
+      </div>
+      <div class="item">
+        <img src="/image/plumber.avif" alt="UK Vehicle Service">
+        <h3>Plumb Service</h3>
+        <button class="book-button" onclick="bookItem('UK Vehicle Service')">Get Details</button>
+      </div>
+      <div class="item">
+        <img src="/image/halwai.jpeg" alt="Halwai Wala">
+        <h3>Raghu Halwai</h3>
+        <button class="book-button" onclick="bookItem('Halwai Wala')">Get Details</button>
+      </div>
+
+      <!-- Remaining items hidden initially -->
+      <div class="item hidden">
+        <img src="/image/bhagda.jpeg" alt="Punjabi Bhagda Group">
+        <h3>Punjabi Bhagda Group</h3>
+        <button class="book-button" onclick="bookItem('Punjabi Bhagda Group')">Get Details</button>
+      </div>
+      <div class="item hidden">
+        <img src="/image/dj.jpeg" alt="Sarjan DJ">
+        <h3>Sarjan DJ</h3>
+        <button class="book-button" onclick="bookItem('Sarjan DJ')">Get Details</button>
+      </div>
+      <div class="item hidden">
+        <img src="/image/decoration.jpeg" alt="Jai Decoration">
+        <h3>Jai Decoration</h3>
+        <button class="book-button" onclick="bookItem('Jai Decoration')">Get Details</button>
+      </div>
+      <div class="item hidden">
+        <img src="/image/photo.jpeg" alt="SK Photographer">
+        <h3>SK Photographer</h3>
+        <button class="book-button" onclick="bookItem('SK Photographer')">Get Details</button>
+      </div>
+      <!-- Add more items as needed, all with class "hidden" -->
     </div>
-</div>
+
+    <!-- Browse More Button -->
+    <button id="browseMoreBtn" onclick="showMoreItems()">Browse More...</button>
+  </div>
+</section>
+
+<section class="why-bookingyard">
+    <h2>Why BookingYard.in?</h2>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-cog"></i></div>
+      <div class="feature-text">
+        <h3>Service Available within 30 Min</h3>
+        <p>Quick response time for all your booking needs.</p>
+      </div>
+    </div>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+      <div class="feature-text">
+        <h3>No Hidden Charges</h3>
+        <p>Transparent pricing with no surprises.</p>
+      </div>
+    </div>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-phone-volume"></i></div>
+      <div class="feature-text">
+        <h3>Direct Deal with Vendors</h3>
+        <p>No intermediaries, ensuring direct and fair interactions.</p>
+      </div>
+    </div>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+      <div class="feature-text">
+        <h3>Easy Interface</h3>
+        <p>User-friendly design for a seamless booking experience.</p>
+      </div>
+    </div>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-medkit"></i></div>
+      <div class="feature-text">
+        <h3>Health Insurance for Vendors</h3>
+        <p>We care for our vendors' well-being and security.</p>
+      </div>
+    </div>
+  
+    <div class="feature">
+      <div class="feature-icon"><i class="fas fa-arrow-up"></i></div>
+      <div class="feature-text">
+        <h3>Empowering Local Businesses</h3>
+        <p>Supporting and promoting local vendors and services.</p>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="quality-assured">
+    <div class="quality-icon">
+      <img src="/image/service.png" alt="Quality Assured" />
+    </div>
+    <h3>100% Quality Assured</h3>
+    <p>If you are not satisfied with our work, we offer a 6-hour warranty.</p>
+  </section>
+  
+
+  
  
-    <script src="/assets/script.js"></script>
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 style="color: #046c9f;">What Our Users Say</h2>
+        <blockquote>
+            <p>"An amazing platform! I found exactly what I needed."</p>
+            <cite>- Happy Customer</cite>
+        </blockquote>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <p>Contact us at: support@bookingyard.in</a></p>
+        <p>Follow us on social media!</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/bookingyard-in/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/bookingyard" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>  
+            </a>
+            <a href="https://www.facebook.com/bookingyard" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i> 
+            </a>
+             
+        </div>
+    </div>
+</footer>
+ 
+  <!-- Footer Navigation -->
+  <footer id="footer">
+    <div class="footer-links">
+      <a href="/index.html" class="footer-button">
+        <img src="/image/home.png" alt="Home" class="icon">
+        <span>Home</span>
+      </a>
+      <a href="#items" class="footer-button">
+        <img src="/image/local.jpeg" alt="More" class="icon">
+        <span>Yard</span>
+      </a>
+      <a href="/assets/other.html" class="footer-button">
+        <img src="/image/others.jpg" alt="Menu" class="icon">
+        <span>Others</span>
+      </a>
+      <a href="/assets/login.html" class="footer-button">
+        <img src="/image/profile.png" alt="You" class="icon">
+        <span>You</span>
+      </a>
+    </div>
+  </footer>
+  
+  
+  <script src="/assets/script.js"></script>
 </body>
 </html>
