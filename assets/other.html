@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="bookingyard-icon" href="/image/icon.ico.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookingYard.in</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+ <!-- Header Section -->
+ <header>
+  <div class="logo">BookingYard.in</div>
+  <button class="cta" onclick="showNoticeBoard()">Get App</button>
+  <button class="toggle-button" onclick="toggleMenu()">☰</button>
+</header>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <a href="/assets/about.html">About Us</a>
+    <a href="/assets/other.html">F&Q</a>
+    <a href="/assets/login.html">Help & Support</a>
+    <a href="/assets/hiring.html">We are hiring</a>
+    <!-- Add more links as needed -->
+  </div>
+   <!-- Notice Board Modal -->
+<div id="notice-board" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeNoticeBoard()">&times;</span>
+    <h2>Thank You!</h2>
+    <p>Thank you for showing your interest. The app is about to launch soon. Stay tuned!</p>
+  </div>
+</div>
+
+  <section class="hero" id="home">
+    <div class="container">
+        <h2>Book Anything, Anytime Seamlessly</h2>
+        <p>Browse Your booking services from here without login there!</p>
+        <p></p>
+        <!-- <a href="#features" class="cta-button">Get Started</a> -->
+    </div>
+</section>
+
+<body>
+  <section class="service-section">
+    <!-- Quick Commerce -->
+    <div class="category">
+      <div class="category-header">
+        <h2>Quick Commerce</h2>
+        <button class="view-all" onclick="viewAll('quick-commerce')">View All &rarr;</button>
+      </div>
+      <div class="icon-row">
+        <a href="https://www.zepto.com" class="service-icon" target="_blank">
+          <img src="/image/zepto.jpeg" alt="Zepto">
+          <span>Zepto</span>
+        </a>
+        <a href="https://www.blinkit.com" class="service-icon" target="_blank">
+          <img src="/image/blinkit1.jpg" alt="Blinkit">
+          <span>Blinkit</span>
+        </a>
+        <a href="https://www.bigbasket.com" class="service-icon" target="_blank">
+          <img src="/image/bigbasket.png" alt="BigBasket">
+          <span>BigBasket</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Food Sites -->
+    <div class="category">
+      <div class="category-header">
+        <h2>Food Sites</h2>
+        <button class="view-all" onclick="viewAll('food-sites')">View All &rarr;</button>
+      </div>
+      <div class="icon-row">
+        <a href="https://www.zomato.com" class="service-icon" target="_blank">
+          <img src="/image/zomato1.avif" alt="Zomato">
+          <span>Zomato</span>
+        </a>
+        <a href="https://www.swiggy.com" class="service-icon" target="_blank">
+          <img src="/image/swigy.png" alt="Swiggy">
+          <span>Swiggy</span>
+        </a>
+        <a href="https://www.foodpanda.com" class="service-icon" target="_blank">
+          <img src="/image/foodpanda.jpeg" alt="Foodpanda">
+          <span>Foodpanda</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Cab Services -->
+    <div class="category">
+      <div class="category-header">
+        <h2>Cab Services</h2>
+        <button class="view-all" onclick="viewAll('cab-services')">View All &rarr;</button>
+      </div>
+      <div class="icon-row">
+        <a href="https://www.ola.com" class="service-icon" target="_blank">
+          <img src="/image/ola.webp" alt="OLA">
+          <span>OLA</span>
+        </a>
+        <a href="https://www.uber.com" class="service-icon" target="_blank">
+          <img src="/image/uber.jpeg" alt="Uber">
+          <span>Uber</span>
+        </a>
+        <a href="https://www.indrive.com" class="service-icon" target="_blank">
+          <img src="/image/indrive.jpeg" alt="Indrive">
+          <span>Indrive</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Traveling -->
+    <div class="category">
+      <div class="category-header">
+        <h2>Traveling</h2>
+        <button class="view-all" onclick="viewAll('traveling')">View All &rarr;</button>
+      </div>
+      <div class="icon-row">
+        <a href="https://www.oyorooms.com" class="service-icon" target="_blank">
+          <img src="/image/oyo1.png" alt="OYO">
+          <span>OYO</span>
+        </a>
+        <a href="https://www.booking.com" class="service-icon" target="_blank">
+          <img src="/image/booking1.png" alt="Booking">
+          <span>Booking</span>
+        </a>
+        <a href="https://www.makemytrip.com" class="service-icon" target="_blank">
+          <img src="/image/makemytrip.png" alt="BookingYard">
+          <span>MakeMyTrip</span>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+<footer id="contact">
+  <div class="container">
+      <p>Contact us at: support@bookingyard.in</a></p>
+      <p>Follow us on social media!</p>
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/company/bookingyard-in/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/bookingyard" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>  
+          </a>
+          <a href="https://www.facebook.com/bookingyard" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook"></i> 
+          </a>
+           
+      </div>
+  </div>
+</footer>
+
+ <!-- Footer Navigation -->
+ <footer id="footer">
+  <div class="footer-links">
+    <a href="/index.html" class="footer-button">
+      <img src="/image/home.png" alt="Home" class="icon">
+      <span>Home</span>
+    </a>
+    <a href="/more.html" class="footer-button">
+      <img src="/image/local.jpeg" alt="More" class="icon">
+      <span>Yard</span>
+    </a>
+    <a href="/assets/other.html" class="footer-button">
+      <img src="/image/others.jpg" alt="Menu" class="icon">
+      <span>Others</span>
+    </a>
+    <a href="/assets/login.html" class="footer-button">
+      <img src="/image/profile.png" alt="You" class="icon">
+      <span>Account</span>
+    </a>
+  </div>
+</footer>
+  <script src="/assets/script.js"></script>
+    
+</body>
+</html>
