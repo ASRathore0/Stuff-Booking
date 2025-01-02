@@ -22,11 +22,15 @@
 
   <!-- Sidebar Menu -->
 <div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    BookingYard.in
+  </div>
   <a href="/assets/about.html">About Us</a>
   <a href="/assets/other.html">F&Q</a>
   <a href="/assets/support.html">Help & Support</a>
   <a href="/assets/hiring.html">We are hiring</a>
   <!-- Add more links as needed -->
+  <button class="close-btn" onclick="toggleSidebar()">×</button>
 </div>
   
 
@@ -40,12 +44,12 @@
   </div>
 
   <!-- Pop-up Message Structure -->
-<div id="popupMessage" class="popup hidden">
+<!-- <div id="popupMessage" class="popup hidden">
   <div class="popup-content">
     <p>We apologize for any inconvenience caused. We are working to improve your experience on BookingYard.in.</p>
     <button onclick="closePopup()">Close</button>
   </div>
-</div>
+</div> -->
 
 <script>
   // Show the pop-up message after 5 seconds
@@ -60,36 +64,111 @@
 </script>
  
 
-  <section class="hero" id="home">
-    <div class="container">
-        <h2>Book Anything, Anytime</h2>
-        <p>Find what you need today!</p>
-        <!-- <a href="#features" class="cta-button">Get Started</a> -->
+<section class="hero" id="home">
+  <div class="container">
+    <h2>Book Anything, Anytime</h2>
+    <p>Find what you need today!</p>
+  </div>
+
+  <!-- Image Gallery/Carousel -->
+  <div class="offer-carousel">
+    <div class="offer-slide">
+      <img src="image/airbnb.jpeg" alt="Offer 1">
     </div>
+    <div class="offer-slide">
+      <img src="image/cleaner.jpg" alt="Offer 2">
+    </div>
+    <div class="offer-slide">
+      <img src="image/" alt="Offer 3">
+    </div>
+    <!-- Add more slides as needed -->
+  </div>
 </section>
 
-<section class="search-section">
-    <h2>Find Service Near You</h2>
-    <div class="location-search">
-        <input type="text" id="manualLocation" placeholder="Enter your location" />
-        <button id="locationBtn" class="location-button">Use My Current Location</button>
+
+  
+<div class="container">
+ 
+  <div class="location-search-bar">
+    <input 
+      type="text" 
+      placeholder="Search for a Location..." 
+      class="search-input" 
+      id="locationInput"
+      oninput="handleInput()" 
+    />
+    <button class="geo-btn" onclick="getCurrentLocation()">
+      <i class="fas fa-map-marker-alt"></i>
+    </button>
+    <ul id="suggestions" class="suggestions-list"></ul>
+  </div>
+  
+   
+
+  <div class="service-categories">
+    <div class="scroll-container">
+      <button onclick="selectCategory(this, 'event')" class="category-btn active">Event</button>
+      <button onclick="selectCategory(this, 'homes')" class="category-btn">Home services</button>
+      <button onclick="selectCategory(this, 'cabs')" class="category-btn">Cabs</button>
+      <button onclick="selectCategory(this, 'hotels')" class="category-btn">Hotels</button>
+      <button onclick="selectCategory(this, 'other')" class="category-btn">Other</button>
     </div>
+  </div>
+  
     
-    <div class="category-filter">
-        <label for="category">Choose a category:</label>
-        <select id="category">
-            <option value="all">All</opltion>
-            <option value="TentHouse">Tent House</option>
-            <option value="Vehical">Vehical</option>
-            <option value="Halwai">Halwai</option>
-            <option value="Waiter">Waiter</option>
-            <option value="Decoratore">Decoratore</option>
-            <option value="photographer">Photographer or Videographer</option>
-        </select>
-    </div>
-    
-    <div id="availableStuff" class="available-stuff"></div>
-</section>
+<!-- Service Grids -->
+<div id="categories-container">
+  <!-- Event Grid -->
+  <div class="service-grid" id="event" data-category="event">
+      <div class="service-box"><img src="/image/sound.jpeg" alt="DJ"><span>Sound</span></div>
+      <div class="service-box"><img src="/image/photo.jpeg" alt="Photographer"><span>Photographer</span></div>
+      <div class="service-box"><img src="/image/waiter.jpeg" alt="Catering"><span>Catering</span></div>
+      <div class="service-box"><img src="/image/decoration.jpeg" alt="Lighting"><span>Decorator</span></div>
+      <div class="service-box"><img src="/image/tent.jpeg" alt="Tent"><span>Tent</span></div>
+      <div class="service-box"><img src="/image/halwai.jpeg" alt="Sound"><span>Chef</span></div>
+      <div class="service-box"><img src="/image/JaiMala Stage.jpg" alt="Sound"><span>Jaimala Stage</span></div>
+      <div class="service-box"><img src="/image/bride.jpeg" alt="Sound"><span>Bride & Groom</span></div>
+      <div class="service-box"><img src="/image/car.jpeg" alt="Sound"><span>Vehicles</span></div>
+  </div>
+
+  <!-- Home Service Grid -->
+  <div class="service-grid hidden" id="homes" data-category="homes">
+      <div class="service-box"><img src="/image/plumber.avif" alt="Plumber"><span>Plumber</span></div>
+      <div class="service-box"><img src="/image/electition.webp" alt="Electrician"><span>Electrician</span></div>
+      <div class="service-box"><img src="image/cleaner.jpg" alt="Cleaner"><span>Cleaner</span></div>
+      <div class="service-box"><img src="/image/gardener.jpeg" alt="Gardener"><span>Gardener</span></div>
+      <div class="service-box"><img src="/image/Painter.jpg" alt="Painter"><span>Painter</span></div>
+      <div class="service-box"><img src="/image/Carpenter.jpg" alt="Repairer"><span>Carpenter</span></div>
+      <div class="service-box"><img src="image/Pest Control.jpeg" alt="Repairer"><span>Pest Control</span></div>
+      <div class="service-box"><img src="image/teacher.jpeg" alt="Repairer"><span>Tution Teacher</span></div>
+      <div class="service-box"><img src="image/Doctor.png" alt="Repairer"><span>Family Doctor</span></div>
+  </div>
+
+  <!-- Cabs Grid -->
+  <div class="service-grid hidden" id="cabs" data-category="cabs">
+    <div class="service-box"><img src="image/Bike.webp" alt="Bike"><span>Bike</span></div>
+    <div class="service-box"><img src="image/Toto.avif" alt="Van"><span>Toto</span></div>
+    <div class="service-box"><img src="image/Auto.webp" alt="Auto"><span>Auto</span></div>
+    <div class="service-box"><img src="image/Taxi.jpg" alt="Taxi"><span>Taxi</span></div>
+      <div class="service-box"><img src="image/car.jpeg" alt="Car"><span>Car</span></div>
+      <div class="service-box"><img src="image/SUV.jpeg" alt="SUV"><span>SUV</span></div>
+      <div class="service-box"><img src="image/Pikup.jpg" alt="Van"><span>Pikup</span></div>
+      <div class="service-box"><img src="image/Tractor.webp" alt="Van"><span>Tractor</span></div>
+      <div class="service-box"><img src="image/Bus.webp" alt="Van"><span>Bus</span></div>
+  </div>
+
+  <!-- Hotels Grid -->
+  <div class="service-grid hidden" id="hotels" data-category="hotels">
+      <div class="service-box"><img src="image/5-star.jpg" alt="5-star"><span>5-star</span></div>
+      <div class="service-box"><img src="image/4-star.webp" alt="4-star"><span>4-star</span></div>
+      <div class="service-box"><img src="image/3-star.webp" alt="3-star"><span>3-star</span></div>
+      <div class="service-box"><img src="image/Motel.jpg" alt="Motel"><span>Motel</span></div>
+      <div class="service-box"><img src="image/Guesthouse.jpg" alt="Guesthouse"><span>Guesthouse</span></div>
+      <div class="service-box"><img src="image/PG.jpg" alt="Hostel"><span>PG</span></div>
+      <div class="service-box"><img src="image/Rental Room.webp" alt="Hostel"><span>Rental Room</span></div>
+      <div class="service-box"><img src="image/othe.jpg" alt="Hostel"><span>Others</span></div>
+  </div>
+</div>
 
 
 
@@ -107,60 +186,6 @@
     </div>
 </section> -->
 
-<section class="items" id="items">
-  <div class="container">
-    <h2>Browse Services</h2>
-    <div class="item-list">
-      <!-- First 4 items shown initially -->
-      <div class="item">
-        <img src="/image/tent.jpeg" alt="Munna Tent House">
-        <h3>Munna Tent House</h3>
-        <button class="book-button" onclick="bookItem('Munna Tent House')">Get Details</button>
-      </div>
-      <div class="item">
-        <img src="/image/waiter.jpeg" alt="RK Waiter Group">
-        <h3>RK Waiter Group</h3>
-        <button class="book-button" onclick="bookItem('RK Waiter Group')">Get Details</button>
-      </div>
-      <div class="item">
-        <img src="/image/plumber.avif" alt="UK Vehicle Service">
-        <h3>Plumb Service</h3>
-        <button class="book-button" onclick="bookItem('UK Vehicle Service')">Get Details</button>
-      </div>
-      <div class="item">
-        <img src="/image/halwai.jpeg" alt="Halwai Wala">
-        <h3>Raghu Halwai</h3>
-        <button class="book-button" onclick="bookItem('Halwai Wala')">Get Details</button>
-      </div>
-
-      <!-- Remaining items hidden initially -->
-      <div class="item hidden">
-        <img src="/image/bhagda.jpeg" alt="Punjabi Bhagda Group">
-        <h3>Punjabi Bhagda Group</h3>
-        <button class="book-button" onclick="bookItem('Punjabi Bhagda Group')">Get Details</button>
-      </div>
-      <div class="item hidden">
-        <img src="/image/dj.jpeg" alt="Sarjan DJ">
-        <h3>Sarjan DJ</h3>
-        <button class="book-button" onclick="bookItem('Sarjan DJ')">Get Details</button>
-      </div>
-      <div class="item hidden">
-        <img src="/image/decoration.jpeg" alt="Jai Decoration">
-        <h3>Jai Decoration</h3>
-        <button class="book-button" onclick="bookItem('Jai Decoration')">Get Details</button>
-      </div>
-      <div class="item hidden">
-        <img src="/image/photo.jpeg" alt="SK Photographer">
-        <h3>SK Photographer</h3>
-        <button class="book-button" onclick="bookItem('SK Photographer')">Get Details</button>
-      </div>
-      <!-- Add more items as needed, all with class "hidden" -->
-    </div>
-
-    <!-- Browse More Button -->
-    <button id="browseMoreBtn" onclick="showMoreItems()">Browse More...</button>
-  </div>
-</section>
 
 <section class="why-bookingyard">
     <h2>Why BookingYard.in?</h2>
