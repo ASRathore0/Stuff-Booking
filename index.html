@@ -68,11 +68,9 @@
   <div class="container">
     <h2>Book Anything, Anytime</h2>
     <p>Find what you need today!</p>
-  </div> 
+  </div>
 </section>
-
-
-  
+ 
 <div class="container">
  
   <div class="location-search-bar">
@@ -88,24 +86,26 @@
     </button>
     <ul id="suggestions" class="suggestions-list"></ul>
   </div>
+</div>
   
    
 
   <div class="service-categories">
     <div class="scroll-container">
-      <button onclick="selectCategory(this, 'event')" class="category-btn active">Event</button>
-      <button onclick="selectCategory(this, 'homes')" class="category-btn">Home services</button>
+      <button onclick="selectCategory(this, 'homes')" class="category-btn active">Home services</button>
+      <button onclick="selectCategory(this, 'event')" class="category-btn">Event</button>
       <button onclick="selectCategory(this, 'cabs')" class="category-btn">Cabs</button>
       <button onclick="selectCategory(this, 'hotels')" class="category-btn">Hotels</button>
       <button onclick="selectCategory(this, 'other')" class="category-btn">Other</button>
     </div>
   </div>
+ 
   
     
 <!-- Service Grids -->
 <div id="categories-container">
   <!-- Event Grid -->
-  <div class="service-grid" id="event" data-category="event">
+  <div class="service-grid hidden" id="event" data-category="event">
       <div class="service-box"><img src="/image/sound.jpeg" alt="DJ"><span>Sound</span></div>
       <div class="service-box"><img src="/image/photo.jpeg" alt="Photographer"><span>Photographer</span></div>
       <div class="service-box"><img src="/image/waiter.jpeg" alt="Catering"><span>Catering</span></div>
@@ -118,7 +118,7 @@
   </div>
 
   <!-- Home Service Grid -->
-  <div class="service-grid hidden" id="homes" data-category="homes">
+  <div class="service-grid" id="homes" data-category="homes">
       <div class="service-box"><img src="/image/plumber.avif" alt="Plumber"><span>Plumber</span></div>
       <div class="service-box"><img src="/image/electition.webp" alt="Electrician"><span>Electrician</span></div>
       <div class="service-box"><img src="image/cleaner.jpg" alt="Cleaner"><span>Cleaner</span></div>
@@ -154,10 +154,7 @@
       <div class="service-box"><img src="image/Rental Room.webp" alt="Hostel"><span>Rental Room</span></div>
       <div class="service-box"><img src="image/othe.jpg" alt="Hostel"><span>Others</span></div>
   </div>
-</div>
-
-
-
+ 
 <!-- <section class="features" id="features">
     <div class="container">
         <h2>Features</h2>
@@ -223,10 +220,10 @@
         <p>Supporting and promoting local vendors and services.</p>
       </div>
     </div>
+
+    
   </section>
-
-
-  
+ 
   <section class="quality-assured">
     <div class="quality-icon">
       <img src="/image/service.png" alt="Quality Assured" />
@@ -234,11 +231,7 @@
     <h3>100% Quality Assured</h3>
     <p>If you are not satisfied with our work, we offer a 6-hour warranty.</p>
   </section>
-  
-
-  
- 
-
+   
 <section class="testimonials" id="testimonials">
     <div class="container">
         <h2 style="color: #046c9f;">What Our Users Say</h2>
@@ -249,7 +242,7 @@
     </div>
 </section>
 
-<footer id="contact">
+<!-- <footer id="contact">
     <div class="container">
         <p>Contact us at: support@bookingyard.in</a></p>
         <p>Follow us on social media!</p>
@@ -263,10 +256,13 @@
             <a href="https://www.facebook.com/bookingyard" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i> 
             </a>
-             
+            <a href="https://www.instagram.com/bookingyard.in" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i> 
+          </a>
         </div>
-    </div>
-</footer>
+      </div>
+      <p>All Rights Reserves @BookingYard.in</p>
+</footer> -->
  
   <!-- Footer Navigation -->
   <footer id="footer">
@@ -289,8 +285,64 @@
       </a>
     </div>
   </footer>
-  
-  
+
+  <footer class="modern-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>BookingYard<span>.in</span></h2>
+            <p>Your all-in-one platform for seamless event bookings.</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/assets/about.html">About Us</a></li>
+                    <li><a href="/assets/hiring.html">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="/assets/support.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Home Services</a></li>
+                    <li><a href="#">Cab</a></li>
+                    <li><a href="#">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/assets/support.html">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4>Stay Connected</h4>
+            <p>Sign up for our newsletter to get the latest updates and offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/BookingYardin/61568422323510" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/bookingyard" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bookingyard.in" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/bookingyard-in" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 BookingYard.in. All Rights Reserved.</p>
+    </div>
+</footer>
+   
   <script src="/assets/script.js"></script>
 </body>
 </html>
