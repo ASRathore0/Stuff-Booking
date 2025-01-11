@@ -383,5 +383,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
- 
