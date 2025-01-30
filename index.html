@@ -117,8 +117,9 @@
       <button onclick="selectCategory(this, 'homes')" class="category-btn active">Home services</button>
       <button onclick="selectCategory(this, 'event')" class="category-btn">Event</button>
       <button onclick="selectCategory(this, 'cabs')" class="category-btn">Cabs</button>
-      <button onclick="selectCategory(this, 'Working')" class="category-btn">Working Professionals</button>
       <button onclick="selectCategory(this, 'hotels')" class="category-btn">Hotels</button>
+      <button onclick="selectCategory(this, 'Working')" class="category-btn">Working Professionals</button>
+      <!-- <button onclick="selectCategory(this, 'Health')" class="category-btn">Health & Wellness</button> -->
     </div>
   </div>
  
@@ -126,19 +127,7 @@
     
 <!-- Service Grids -->
 <div id="categories-container">
-  <!-- Event Grid -->
-  <div class="service-grid hidden" id="event" data-category="event">
-      <div class="service-box" data-target="dj" ><img src="/image/sound.jpeg" alt="DJ"><span>Sound</span></div>
-      <div class="service-box" data-target="Photographer" ><img src="/image/photo.jpeg" alt="Photographer"><span>Photographer</span></div>
-      <div class="service-box" data-target="Catering" ><img src="/image/waiter.jpeg" alt="Catering"><span>Catering</span></div>
-      <div class="service-box" data-target="Decorator" ><img src="/image/decoration.jpeg" alt="Lighting"><span>Decorator</span></div>
-      <div class="service-box" data-target="Tent" ><img src="/image/tent.jpeg" alt="Tent"><span>Tent House</span></div>
-      <div class="service-box" data-target="Chef" ><img src="/image/halwai.jpeg" alt="Sound"><span>Chef</span></div>
-      <div class="service-box" data-target="Jaimala" ><img src="/image/JaiMala Stage.jpg" alt="Sound"><span>Jaimala Stage</span></div>
-      <div class="service-box" data-target="Bride" ><img src="/image/bride.jpeg" alt="Sound"><span>Bride & Groom</span></div>
-      <div class="service-box" data-target="Vehicles" ><img src="/image/car.jpeg" alt="Sound"><span>Vehicles</span></div>
-  </div>
-
+ 
   <!-- Home Service Grid -->
   <div class="service-grid" id="homes" data-category="homes">
       <div class="service-box" data-target="Plumber"><img src="/image/plumber.avif" alt="Plumber"><span>Plumber</span></div>
@@ -151,6 +140,19 @@
       <div class="service-box" data-target="Tution"><img src="image/teacher.jpeg" alt="Repairer"><span>Tution Teacher</span></div>
       <div class="service-box" data-target="Family"><img src="image/Doctor.png" alt="Repairer"><span>Family Doctor</span></div>
   </div>
+
+  <!-- Event Grid -->
+  <div class="service-grid hidden" id="event" data-category="event">
+    <div class="service-box" data-target="dj" ><img src="/image/sound.jpeg" alt="DJ"><span>Sound</span></div>
+    <div class="service-box" data-target="Photographer" ><img src="/image/photo.jpeg" alt="Photographer"><span>Photographer</span></div>
+    <div class="service-box" data-target="Catering" ><img src="/image/waiter.jpeg" alt="Catering"><span>Catering</span></div>
+    <div class="service-box" data-target="Decorator" ><img src="/image/decoration.jpeg" alt="Lighting"><span>Decorator</span></div>
+    <div class="service-box" data-target="Tent" ><img src="/image/tent.jpeg" alt="Tent"><span>Tent House</span></div>
+    <div class="service-box" data-target="Chef" ><img src="/image/halwai.jpeg" alt="Sound"><span>Chef</span></div>
+    <div class="service-box" data-target="Jaimala" ><img src="/image/JaiMala Stage.jpg" alt="Sound"><span>Jaimala Stage</span></div>
+    <div class="service-box" data-target="Bride" ><img src="/image/bride.jpeg" alt="Sound"><span>Bride & Groom</span></div>
+    <div class="service-box" data-target="Vehicles" ><img src="/image/car.jpeg" alt="Sound"><span>Vehicles</span></div>
+</div>
 
   <!-- Cabs Grid -->
   <div class="service-grid hidden" id="cabs" data-category="cabs">
@@ -165,6 +167,19 @@
     <div class="service-box" data-target="Bus"><img src="image/Bus.webp" alt="Van"><span>Bus</span></div>
   </div>
 
+  <!-- Working Professional Grid -->
+  <div class="service-grid hidden" id="Working" data-category="Working">
+    <div class="service-box" data-target="Family"><img src="image/HealthWellness.png" alt="Health and Wellness"><span>Health and Wellness</span></div>
+    <div class="service-box" data-target="Tution"><img src="image/Tutors and Educators.jpg" alt="Tutors and Educators"><span>Tutors and Educators</span></div>
+    <div class="service-box" data-target="Technology"><img src="image/Technology Services.jpg" alt="Technology Services"><span>Technology Services</span></div>
+    <div class="service-box" data-target="Legal"><img src="image/Legal and Financial Services.webp" alt="egal and Financial Services"><span>Legal and Financial Services</span></div>
+    <div class="service-box" data-target="Estate"><img src="image/estate.jpeg" alt="Estate Agent"><span>Estate Agent</span></div>
+    <div class="service-box" data-target="Bride"><img src="image/bride.jpeg" alt="Beauty and Grooming"><span>Beauty and Grooming</span></div>
+    <div class="service-box" data-target="massage"><img src="image/massage.webp" alt="Massage & Spa"><span>Massage & Spa</span></div>
+    <div class="service-box" data-target="Tractor"><img src="image/yoga.jpeg" alt="Yoga & Trainer"><span>Yoga & Trainer</span></div>
+    <div class="service-box" data-target="Bus"><img src="image/Bus.webp" alt="Van"><span>...</span></div>
+  </div>
+
   <!-- Hotels Grid -->
   <div class="service-grid hidden" id="hotels" data-category="hotels">
       <div class="service-box" data-target="5-star"><img src="image/5-star.jpg" alt="5-star"><span>5-star</span></div>
@@ -177,43 +192,47 @@
       <div class="service-box" data-target="Others"><img src="image/othe.jpg" alt="Hostel"><span>Others</span></div>
   </div>
 
-  <!-- Cabs Grid -->
-  <div class="service-grid hidden" id="Working" data-category="cabs">
-    <div class="service-box" data-target="Family"><img src="image/HealthWellness.png" alt="SUV"><span> Health and Wellness</span></div>
-    <div class="service-box" data-target="Tution"><img src="image/Tutors and Educators.jpg" alt="Bike"><span>Tutors and Educators</span></div>
-    <div class="service-box" data-target="Bride"><img src="image/bride.jpeg" alt="Van"><span>Beauty and Grooming</span></div>
-    <div class="service-box" data-target="Technology"><img src="image/Technology Services.jpg" alt="Auto"><span>Technology Services</span></div>
-    <div class="service-box" data-target="Legal"><img src="image/Legal and Financial Services.webp" alt="Taxi"><span>Legal and Financial Services</span></div>
-    <div class="service-box" data-target="Drivers"><img src="image/Drivers.jpg" alt="Car"><span>Drivers</span></div>
-    <div class="service-box" data-target="Pikup"><img src="image/Pikup.jpg" alt="Van"><span>...</span></div>
-    <div class="service-box" data-target="Tractor"><img src="image/Tractor.webp" alt="Van"><span>...</span></div>
-    <div class="service-box" data-target="Bus"><img src="image/Bus.webp" alt="Van"><span>...</span></div>
-  </div>
-  
+  <!-- Health & Wellness Grid -->
+  <!-- <div class="service-grid hidden" id="Health" data-category="Health">
+    <div class="service-box" data-target="dj" ><img src="/image/sound.jpeg" alt="DJ"><span>Sound</span></div>
+    <div class="service-box" data-target="Photographer" ><img src="/image/photo.jpeg" alt="Photographer"><span>Photographer</span></div>
+    <div class="service-box" data-target="Catering" ><img src="/image/waiter.jpeg" alt="Catering"><span>Catering</span></div>
+    <div class="service-box" data-target="Decorator" ><img src="/image/decoration.jpeg" alt="Lighting"><span>Decorator</span></div>
+    <div class="service-box" data-target="Tent" ><img src="/image/tent.jpeg" alt="Tent"><span>Tent House</span></div>
+    <div class="service-box" data-target="Chef" ><img src="/image/halwai.jpeg" alt="Sound"><span>Chef</span></div>
+    <div class="service-box" data-target="Jaimala" ><img src="/image/JaiMala Stage.jpg" alt="Sound"><span>Jaimala Stage</span></div>
+    <div class="service-box" data-target="Bride" ><img src="/image/bride.jpeg" alt="Sound"><span>Bride & Groom</span></div>
+    <div class="service-box" data-target="Vehicles" ><img src="/image/car.jpeg" alt="Sound"><span>Vehicles</span></div>
+</div> -->
+
+
 <!-- Services List -->
 <section class="services-section">
   <h2></h2>
 
   <!-- Home services (Plumber) Card 1 -->
-  <div class="service-card hidden " id="Plumber">
+  <div class="service-card hidden" id="Plumber" data-card-id="Plumber1" onclick="showButtons(this)">
     <div class="service-image">
-      <img src="https://b3503797.smushcdn.com/3503797/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg?lossy=2&strip=1&webp=1" alt="The Downtown Cafe">
-      <span class="offer-tag">Flat 15% OFF</span>
+        <img src="https://b3503797.smushcdn.com/3503797/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg?lossy=2&strip=1&webp=1" alt="The Downtown Cafe">
+        <span class="offer-tag">Flat 15% OFF</span>
     </div>
     <div class="service-details">
-      <h3>Jeet Plumber Baba</h3>
-      <p id="fad">Our best plumbing...</p>
-      <p>Nyi Abadi, Khanna</p>
-      <div class="service-meta">
-        <span class="rating"><i class="fas fa-star"> 2.4</i></span>
-        <span class="price">₹700</span>
-        <span class="distance"><i class="fas fa-map-marker-alt"></i> 2.9 km</span>
-      </div>
+        <h3>Jeet Plumber Baba</h3>
+        <p id="fad">Our best plumbing...</p>
+        <p>Nyi Abadi, Khanna</p>
+        <div class="service-meta">
+            <span class="rating">2.4★</span>
+            <span class="price">₹700</span>
+            <span class="distance"><i class="fas fa-map-marker-alt"></i> 2.9 km</span>
+        </div>
     </div>
-  </div>
-
+    <!-- Placeholder for dynamically added details -->
+    <div class="details hidden"></div>
+    
+</div>
+ 
   <!-- Home services (Plumber) Card 2 -->
-  <div class="service-card hidden " id="Plumber">
+  <div class="service-card hidden " id="Plumber" data-card-id="Plumber2"  onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.edgeip.com/images/FCK/Image/202307/SFG-HowtoBecome-Plumber.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 30% OFF</span>
@@ -223,22 +242,24 @@
       <p id="fad">Our best plumbing...</p>
       <p>Fatehgarh Sahib, Khanna</p>
       <div class="service-meta">
-        <span class="rating"><i class="fas fa-star"> 4.4</i></span>
+        <span class="rating">4.4★</span>
         <span class="price">₹1,000</span>
         <span class="distance"><i class="fas fa-map-marker-alt"></i> 2.3 km</span>
       </div>
     </div>
+    <!-- Placeholder for dynamically added details -->
+    <div class="details hidden"></div>
   </div>
 
   <!-- Home services (Electrician) Card 1 -->
-  <div class="service-card hidden " id="Electrician">
+  <div class="service-card hidden " id="Electrician" onclick="showButtons(this)" >
     <div class="service-image">
       <img src="https://labourmilega.com/wp-content/uploads/2023/04/electrician.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 45% OFF</span>
     </div>
     <div class="service-details">
       <h3>Raj Kumar Electrician</h3>
-      <p id="fad">electric service</p>
+      <p id="fad">electric service</p>  
       <p>Krishna Nagar, Khanna</p>
       <div class="service-meta">
         <span class="rating"><i class="fas fa-star"> 3.4</i></span>
@@ -249,7 +270,7 @@
   </div>
 
   <!-- Home services (Electrician) Card 2 -->
-  <div class="service-card hidden " id="Electrician">
+  <div class="service-card hidden " id="Electrician" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://nerdsmagazine.com/wp-content/uploads/2020/03/Electrical_Engineer_2_1920X10180.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 25% OFF</span>
@@ -267,7 +288,7 @@
   </div>
 
   <!-- Home services (Cleaner) Card 1 -->
-  <div class="service-card hidden " id="Cleaner">
+  <div class="service-card hidden " id="Cleaner" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://koh.com/cdn/shop/files/PDP_content_block_surface_2.jpg?v=1736229314&width=1080" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 26% OFF</span>
@@ -285,7 +306,7 @@
   </div>
 
   <!-- Home services (Cleaner) Card 2 -->
-  <div class="service-card hidden " id="Cleaner">
+  <div class="service-card hidden " id="Cleaner" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.checkatrade.com/blog/wp-content/uploads/2024/09/becoming-a-cleaner-feature.jpeg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 35% OFF</span>
@@ -303,7 +324,7 @@
   </div>
 
   <!-- Home services (Gardener) Card 1 -->
-  <div class="service-card hidden " id="Gardener">
+  <div class="service-card hidden " id="Gardener" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.myjobquote.co.uk/assets/img/how-much-do-gardeners-make-mgXH-c2m750.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 20% OFF</span>
@@ -321,7 +342,7 @@
   </div>
 
   <!-- Home services (Gardener) Card 2 -->
-  <div class="service-card hidden " id="Gardener">
+  <div class="service-card hidden " id="Gardener" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://regionillawarra.com.au/wp-content/uploads/sites/10/2023/09/male-gardener-spraying-water-on-plants-2022-02-02-03-58-41-utc-1200x800.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -339,7 +360,7 @@
   </div>
 
   <!-- Home services (Painter) Card 1 -->
-  <div class="service-card hidden " id="Painter">
+  <div class="service-card hidden " id="Painter" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://media.istockphoto.com/id/1251360797/photo/painting-the-swimming-pool.jpg?s=612x612&w=0&k=20&c=YH7-mJxFKoYBFD5_Un9pOsOkG_CoeoKmRBFSkNJfqp4=" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 35% OFF</span>
@@ -357,7 +378,7 @@
   </div>
 
   <!-- Home services (Painter) Card 2 -->
-  <div class="service-card hidden " id="Painter">
+  <div class="service-card hidden " id="Painter" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://aaashi.b-cdn.net/wp-content/uploads/2021/07/wall-painting-300x199.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -375,7 +396,7 @@
   </div>
 
   <!-- Home services (Carpenter) Card 1 -->
-  <div class="service-card hidden " id="Carpenter">
+  <div class="service-card hidden " id="Carpenter" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://media.licdn.com/dms/image/v2/D5612AQHJ4JMQKvFwpA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1709617139736?e=2147483647&v=beta&t=zYP7vqo4oudV-Fc7hsuzb1r7E7MX9ndL1dVpn80ssd4" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 33% OFF</span>
@@ -393,7 +414,7 @@
   </div>
 
   <!-- Home services (Carpenter) Card 2 -->
-  <div class="service-card hidden " id="Carpenter">
+  <div class="service-card hidden " id="Carpenter" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://allservicesinone.co.uk/wp-content/uploads/2023/03/Eight-Things-You-Need-to-Know-Before-Hiring-Carpenters-1024x576.png" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 10% OFF</span>
@@ -411,7 +432,7 @@
   </div>
 
   <!-- Home services (Pest Control) Card 1 -->
-  <div class="service-card hidden " id="Pest">
+  <div class="service-card hidden " id="Pest" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://cloudfrontgharpediabucket.gharpedia.com/uploads/2024/08/Pest-Control-for-Improved-Home-Longevity-01-0516010019.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 35% OFF</span>
@@ -429,7 +450,7 @@
   </div>
 
   <!-- Home services (Pest Control) Card 2 -->
-  <div class="service-card hidden " id="Pest">
+  <div class="service-card hidden " id="Pest" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://ensia.com/wp-content/uploads/2016/05/feature_pesticides_main.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 23% OFF</span>
@@ -447,7 +468,7 @@
   </div>
 
   <!-- Home services (Tution Teacher) Card 1 -->
-  <div class="service-card hidden " id="Tution">
+  <div class="service-card hidden " id="Tution" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://professnow.com/blog/wp-content/uploads/2021/06/1624536671547.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 12% OFF</span>
@@ -465,7 +486,7 @@
   </div>
 
   <!-- Home services (Tution Teacher) Card 2 -->
-  <div class="service-card hidden " id="Tution">
+  <div class="service-card hidden " id="Tution" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://eduaid.com.sg/wp-content/uploads/2020/11/home-tuition-teacher-singapore-scaled.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 18% OFF</span>
@@ -483,7 +504,7 @@
   </div>
 
   <!-- Home services (Family Doctor) Card 1 -->
-  <div class="service-card hidden " id="Family">
+  <div class="service-card hidden " id="Family" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.articlezenia.in/wp-content/uploads/2023/08/best-pediatrician-greater-noida.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 22% OFF</span>
@@ -501,7 +522,7 @@
   </div>
 
   <!-- Home services (Family Doctor) Card 2 -->
-  <div class="service-card hidden " id="Family">
+  <div class="service-card hidden " id="Family" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://emi.parkview.com/media/Image/Dashboard_952_family_doctor_2_20.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 25% OFF</span>
@@ -519,7 +540,7 @@
   </div>
 
   <!-- Event (Sound) Card 1 -->
-  <div class="service-card hidden " id="dj">
+  <div class="service-card hidden " id="dj" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.zipdj.com/wp-content/uploads/2024/07/become-a-famous-dj.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -537,7 +558,7 @@
   </div>
 
   <!-- Event (Sound) Card 2 -->
-  <div class="service-card hidden" id="dj">
+  <div class="service-card hidden" id="dj" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://fruitpunchdjacademy.com/wp-content/uploads/2023/12/8ed2f529-59ff-4470-9b37-d598efc2f08e-768x577.webp"
@@ -556,7 +577,7 @@
     </div>
   </div>
   <!-- Event (Photographer) Card 1 -->
-  <div class="service-card hidden" id="Photographer">
+  <div class="service-card hidden" id="Photographer" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://careerninja.in/wp-content/uploads/2018/12/indian-photographer.jpg" alt="Afraa">
       <span class="offer-tag">Flat 20% OFF</span>
@@ -574,7 +595,7 @@
   </div>
   
   <!-- Event (Photographer) Card 2 -->
-  <div class="service-card hidden" id="Photographer">
+  <div class="service-card hidden" id="Photographer" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://cdn.thecollector.com/wp-content/uploads/2023/05/tips-to-become-a-great-photographer.jpg?width=1400&quality=70"
@@ -594,7 +615,7 @@
   </div>
   
   <!-- Event (Catering) Card 1 -->
-  <div class="service-card hidden" id="Catering">
+  <div class="service-card hidden" id="Catering" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://metrobi.com/wp-content/uploads/2024/02/catering-business-min-768x439.jpg"
@@ -614,7 +635,7 @@
   </div>
 
   <!-- Event (Catering) Card 2 -->
-  <div class="service-card hidden" id="Catering">
+  <div class="service-card hidden" id="Catering" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://cdn.shopify.com/s/files/1/2257/7809/files/wedding-catering_1024x1024.png?v=1715642945"
@@ -634,7 +655,7 @@
   </div>
 
   <!-- Event (Decorator) Card 1 -->
-  <div class="service-card hidden" id="Decorator">
+  <div class="service-card hidden" id="Decorator" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://shaandaarevents.com/wp-content/uploads/2023/11/Wedding-Decorators-In-Goa.jpeg"
@@ -654,7 +675,7 @@
   </div>
 
   <!-- Event (Decorator) Card 2 -->
-  <div class="service-card hidden" id="Decorator">
+  <div class="service-card hidden" id="Decorator" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/004/023/859/new_medium/ss20220604-28052-wtn020.webp?1654340474"
@@ -674,7 +695,7 @@
   </div>
 
   <!-- Event (Tent) Card 1 -->
-  <div class="service-card hidden" id="Tent">
+  <div class="service-card hidden" id="Tent" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://cdn0.weddingwire.in/vendor/6441/3_2/960/jpg/tent-house-rupesh-tent-house-wedding-tenting2_15_306441-158919435358804.jpeg"
@@ -694,7 +715,7 @@
   </div>
 
   <!-- Event (Tent) Card 2 -->
-  <div class="service-card hidden" id="Tent">
+  <div class="service-card hidden" id="Tent" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlLP6LQy-Ej6MVTw4pvPWqnG0r74dehSjvNdYIYZbpGHL1WrH0013vLF5x97qPGfiXhA&usqp=CAU"
@@ -714,7 +735,7 @@
   </div>
 
   <!-- Event (Chef) Card 1 -->
-  <div class="service-card hidden" id="Chef">
+  <div class="service-card hidden" id="Chef" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://metrobi.com/wp-content/uploads/2024/06/sous-chef.webp"
@@ -734,7 +755,7 @@
   </div>
 
   <!-- Event (Chef) Card 2 -->
-  <div class="service-card hidden" id="Chef">
+  <div class="service-card hidden" id="Chef" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://trainingexpress.org.uk/wp-content/uploads/2021/04/Personalities-that-suit-sous-chef-jobs-768x512.jpg"
@@ -754,7 +775,7 @@
   </div>
 
   <!-- Event (Jaimala Stage) Card 1 -->
-  <div class="service-card hidden" id="Jaimala">
+  <div class="service-card hidden" id="Jaimala" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://image.wedmegood.com/resized/450X/uploads/images/36dbbb637f00414997909c6140946f0brealwedding/20-2-2022_-534.jpg"
@@ -774,7 +795,7 @@
   </div>
 
   <!-- Event (Jaimala Stage) Card 2 -->
-  <div class="service-card hidden" id="Jaimala">
+  <div class="service-card hidden" id="Jaimala" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://i.ytimg.com/vi/x8CVkgyz3hw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB9QL-IhcKX6sD9hEWQvSfVQworZQ"
@@ -794,7 +815,7 @@
   </div>
 
   <!-- Event (Bride & Groom) Card 1 -->
-  <div class="service-card hidden" id="Bride">
+  <div class="service-card hidden" id="Bride" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://medi-metropole.de/cdn/shop/files/AdobeStock_244163733.jpg?v=1717622634&width=480"
@@ -814,7 +835,7 @@
   </div>
 
   <!-- Event (Bride & Groom) Card 2 -->
-  <div class="service-card hidden" id="Bride">
+  <div class="service-card hidden" id="Bride" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://blogscdn.thehut.net/app/uploads/sites/480/2020/04/0430-GCT677-GB-EF-Male-Makeup-1200x672_1588235551.jpg"
@@ -834,7 +855,7 @@
   </div>
 
   <!-- Event (Vehicles) Card 1 -->
-  <div class="service-card hidden" id="Vehicles">
+  <div class="service-card hidden" id="Vehicles" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://s.hdnux.com/photos/01/22/05/77/21520324/4/1200x0.jpg"
@@ -854,7 +875,7 @@
   </div>
 
   <!-- Event (Vehicles) Card 2 -->
-  <div class="service-card hidden" id="Vehicles">
+  <div class="service-card hidden" id="Vehicles" onclick="showButtons(this)">
     <div class="service-image">
       <img
         src="https://luxecars.co.in/wp-content/uploads/2023/03/DSC06925-scaled.jpg"
@@ -874,7 +895,7 @@
   </div>
 
   <!-- Cabs (Bike) Card 1 -->
-  <div class="service-card hidden " id="Bike">
+  <div class="service-card hidden " id="Bike" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.hondaofbournemouth.co.uk/cdn/shop/files/redddd_cfa9db8c-1ee0-41f6-8465-4acb2caaf750_1200x.jpg?v=1701946015" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 25% OFF</span>
@@ -892,7 +913,7 @@
   </div>
 
   <!-- Cabs (Bike) Card 2 -->
-  <div class="service-card hidden " id="Bike">
+  <div class="service-card hidden " id="Bike" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-125-2024/360-degree/neon/neon-new-black-green/00.webp" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 20% OFF</span>
@@ -910,7 +931,7 @@
   </div>
 
   <!-- Cabs (Toto) Card 1 -->
-  <div class="service-card hidden " id="Toto">
+  <div class="service-card hidden " id="Toto" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://image.rickshaws360.com/image/er-1100/shaktimaan/e-rickshaw.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -928,7 +949,7 @@
   </div>
 
   <!-- Cabs (Toto) Card 2 -->
-  <div class="service-card hidden " id="Toto">
+  <div class="service-card hidden " id="Toto" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://www.millenniumpost.in/h-upload/2023/10/10/736251-toto.jpg" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -946,7 +967,7 @@
   </div>
 
   <!-- Working Professionals (Health and Wellness) Card 1 -->
-  <div class="service-card hidden " id="Health">
+  <div class="service-card hidden " id="Health" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://b3503797.smushcdn.com/3503797/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg?lossy=2&strip=1&webp=1" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -964,7 +985,7 @@
   </div>
 
   <!-- Working Professionals (Health and Wellness) Card 2 -->
-  <div class="service-card hidden " id="Health">
+  <div class="service-card hidden " id="Health" onclick="showButtons(this)">
     <div class="service-image">
       <img src="https://b3503797.smushcdn.com/3503797/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg?lossy=2&strip=1&webp=1" alt="The Downtown Cafe">
       <span class="offer-tag">Flat 15% OFF</span>
@@ -980,10 +1001,20 @@
       </div>
     </div>
   </div>
+
+  <!-- Placeholder for dynamically added details -->
+  <div class="details hidden"></div>
+
+  <!-- Buttons -->
+  <div class="buttons hidden">
+      <button><i class="fas fa-phone"></i> Call</button>
+      <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
+      <button><i class="fas fa-map-marker-alt"></i> Direction</button>
+      <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
+  </div>
+</div>
     
 </section>
-
-
 <section class="why-bookingyard">
     <h2>Why BookingYard.in?</h2>
   
@@ -994,7 +1025,6 @@
         <p>Quick response time for all your booking needs.</p>
       </div>
     </div>
-  
     <div class="feature">
       <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
       <div class="feature-text">
@@ -1109,11 +1139,21 @@
                 <h4>Support</h4>
                 <ul>
                     <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">T & C</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="/assets/support.html">Help Center</a></li>
                 </ul>
             </div>
+
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="#">Knowledge</a></li>
+                  <li><a href="#">Return & Refund</a></li>
+                  <li><a href="#">Track Order</a></li>
+                  <li><a href="/assets/support.html">Download App</a></li>
+              </ul>
+          </div>
         </div>
 
         <div class="footer-newsletter">
@@ -1132,7 +1172,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 BookingYard.in. All Rights Reserved.</p>
+        <p>&copy; 2025 BookingYard.in. All Rights Reserved.</p>
     </div>
 </footer>
 
