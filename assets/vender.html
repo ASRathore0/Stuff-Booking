@@ -1,329 +1,186 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="bookingyard-icon" href="/image/icon.ico.jpg">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BookingYard - Login / Sign Up</title>
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Card Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Card Styling */
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 15px;
+            position: relative;
+            background: #fff;
+        }
 
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .service-meta span {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            font-size: 14px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button i {
+            margin-right: 5px;
+        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        /* Details Section */
+        .details {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .details.hidden {
+            display: none;
+        }
+
+        .details .address p,
+        .details .services ul {
+            margin: 5px 0;
+        }
+
+        .details .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .details .services li {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .details .services li i {
+            color: #007bff;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
 
-   <!-- Header Section -->
-  <header>
-    <div class="logo">BookingYard.in</div>
-    <button class="cta" onclick="showNoticeBoard()">Get App</button>
-    <button class="toggle-button" onclick="toggleMenu()">☰</button>
-  </header>
+<div class="service-card" id="Plumber1" id="Plumber">
+    <div class="service-image">
+        <img src="https://b3503797.smushcdn.com/3503797/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg" alt="Plumber Image">
+    </div>
+    <div class="service-details">
+        <h3>Jeet Plumber Baba</h3>
+        <p>Our best plumbing services...</p>
+        <div class="service-meta">
+            <span class="rating"><i class="fas fa-star"></i> 2.4</span>
+            <span class="price">₹700</span>
+            <span class="distance"><i class="fas fa-map-marker-alt"></i> 2.9 km</span>
+        </div>
+    </div>
+    <!-- Placeholder for dynamically added details -->
+    <div class="details hidden"></div>
 
-  <!-- Sidebar Menu -->
-<div class="sidebar" id="sidebar">
-  <a href="/index.html">About Us</a>
-  <a href="/assets/other.html">F&Q</a>
-  <a href="/assets/login.html">Help & Support</a>
-  <a href="/assets/login.html">We are hiring</a>
-  <!-- Add more links as needed -->
+    <!-- Buttons -->
+    <div class="buttons">
+        <button><i class="fas fa-phone"></i> Call</button>
+        <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
+        <button><i class="fas fa-map-marker-alt"></i> Direction</button>
+        <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
+    </div>
 </div>
 
-       <!-- Notice Board Modal -->
-<div id="notice-board" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeNoticeBoard()">&times;</span>
-      <h2>Thank You!</h2>
-      <p>Thank you for showing your interest. The app is about to launch soon. Stay tuned!</p>
+<div class="service-card" id="Plumber2">
+    <div class="service-image">
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </div>
+    <div class="service-details">
+        <h3>Ravi Plumber Services</h3>
+        <p>Reliable and affordable plumbing services...</p>
+        <div class="service-meta">
+            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+            <span class="price">₹500</span>
+            <span class="distance"><i class="fas fa-map-marker-alt"></i> 3.1 km</span>
+        </div>
+    </div>
+    <!-- Placeholder for dynamically added details -->
+    <div class="details hidden"></div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button><i class="fas fa-phone"></i> Call</button>
+        <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
+        <button><i class="fas fa-map-marker-alt"></i> Direction</button>
+        <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
     </div>
 </div>
-   
-  <!-- Services List -->
-  <section class="services-section">
-    <h2>Services in Khanna </h2>
-  
-    <!-- Service Card 1 -->
-    <div class="service-card promoted">
-      <div class="service-image">
-        <img src="https://i.pinimg.com/736x/2e/d9/be/2ed9be4c75de693b75bacd6ed3594b31.jpg" alt="The Downtown Cafe">
-        <span class="offer-tag">Flat 15% OFF</span>
-      </div>
-      <div class="service-details">
-        <h3>The Downtown Cafe</h3>
-        <p>North Indian, Biryani, Chinese...</p>
-        <p>Kankarbagh, Patna</p>
-        <div class="service-meta">
-          <span class="rating"><i class="fas fa-star"></i> 4.4</span>
-          <span class="price">₹1,000 for two</span>
-          <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.9 km</span>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Service Card 2 -->
-    <div class="service-card promoted">
-      <div class="service-image">
-        <img src="https://www.weddingplz.com/images/portfolio/main/31/38966/Joni-Light-And-Tent-House-5315-1-weddingplz.jpg" alt="Afraa">
-        <span class="offer-tag">Flat 20% OFF</span>
-      </div>
-      <div class="service-details">
-        <h3>Afraa</h3>
-        <p>Bengali, Continental, North Indian...</p>
-        <p>Lodipur, Patna</p>
-        <div class="service-meta">
-          <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-          <span class="price">₹1,500 for two</span>
-          <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Service Card 3 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPviWq2g5ZfhHna4RZL837FNa_7YbCQcCVA&s" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
+<script>
+    // Example details for each card
+    const cardDetails = {
+        Plumber1: {
+            address: "Office Number 9 Second Floor, R K Complex Ludhiana, Grain Market, Khanna HO, Khanna - 141401 (Behind Arora Palace)",
+            services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"]
+        },
+        Plumber2: {
+            address: "Plot No 21, Industrial Area Phase 1, Chandigarh - 160002",
+            services: ["Pipes", "Taps", "Valves", "Sinks", "Water Heaters"]
+        }
+    };
 
-      <!-- Service Card 4 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://content.jdmagicbox.com/comp/def_content/home-services/3b7daab8bb-home-services-3-x5hy4.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
+    function showDetails(event, button) {
+        event.stopPropagation(); // Prevent triggering any other click events
 
-      <!-- Service Card 5 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://www.homeservice.co.ke/aboutgallery/about.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
+        // Get the parent card
+        const card = button.closest('.service-card');
+        const cardId = card.id;
 
-      <!-- Service Card 6 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://lilacinfotech.com/lilac_assets/images/blog/top-10-on-demand-home-service-apps-to-use-in-2023.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
+        // Get the details section within the card
+        const detailsDiv = card.querySelector('.details');
 
-      <!-- Service Card 7 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://apnahomeservice.com/webassets/images/aboutimage.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
+        // Check if the details are already visible
+        if (!detailsDiv.classList.contains('hidden')) {
+            detailsDiv.classList.add('hidden');
+            detailsDiv.innerHTML = ""; // Clear the details
+        } else {
+            // Populate the details dynamically
+            const details = cardDetails[cardId];
+            detailsDiv.innerHTML = `
+                <div class="address">
+                    <p><b>Address:</b></p>
+                    <p>${details.address}</p>
+                </div>
+                <div class="services">
+                    <h3>Services</h3>
+                    <ul>
+                        ${details.services.map(service => `<li><i class="fas fa-check-circle"></i> ${service}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            detailsDiv.classList.remove('hidden');
+        }
+    }
+</script>
 
-      <!-- Service Card 9-->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://www.weddingplz.com/images/portfolio/main/31/38966/Joni-Light-And-Tent-House-5315-1-weddingplz.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card 10 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://media.istockphoto.com/id/1457385092/photo/an-asian-young-technician-service-man-wearing-blue-uniform-checking-cleaning-air-conditioner.jpg?s=612x612&w=0&k=20&c=Tqu5jMzD1TKFO1Fvow6d0JMDsEGU8T3kToP706bQFQI=" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card 11-->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsUElhXoTIVfkxtwO-293T3UL6YMYECDh94OOEyUd3gNQF6gUucbxxkj29srmOaPQt-Rk&usqp=CAU " alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card 12 -->
-    <div class="service-card promoted">
-        <div class="service-image">
-          <img src="https://www.weddingplz.com/images/portfolio/main/31/38966/Joni-Light-And-Tent-House-5315-1-weddingplz.jpg" alt="Afraa">
-          <span class="offer-tag">Flat 20% OFF</span>
-        </div>
-        <div class="service-details">
-          <h3>Afraa</h3>
-          <p>Bengali, Continental, North Indian...</p>
-          <p>Lodipur, Patna</p>
-          <div class="service-meta">
-            <span class="rating"><i class="fas fa-star"></i> 4.3</span>
-            <span class="price">₹1,500 for two</span>
-            <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <footer id="footer">
-    <div class="footer-links">
-      <a href="/index.html" class="footer-button">
-        <i class="fa fa-house icon"></i>
-        <span>Home</span>
-      </a>
-      <a href="index.html" class="footer-button">
-        <i class="fa fa-compass icon"></i>
-        <span>Explore</span>
-      </a>
-      <a href="/assets/other.html" class="footer-button">
-        <i class="fa fa-shopping-cart icon"></i>
-        <span>Cart</span>
-      </a>
-      <a href="/assets/login.html" class="footer-button">
-        <i class="fa fa-user icon"></i>
-        <span>Profile</span>
-      </a>
-    </div>
-  </footer>
-
-  <footer class="modern-footer">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <h2>BookingYard<span>.in</span></h2>
-            <p>Your all-in-one platform for seamless event bookings.</p>
-        </div>
-
-        <div class="footer-links">
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/assets/about.html">About Us</a></li>
-                    <li><a href="/assets/hiring.html">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="/assets/support.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Home Services</a></li>
-                    <li><a href="#">Cab</a></li>
-                    <li><a href="#">Hotels</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="/assets/support.html">Help Center</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-newsletter">
-            <h4>Stay Connected</h4>
-            <p>Sign up for our newsletter to get the latest updates and offers.</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required />
-                <button type="submit">Subscribe</button>
-            </form>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/people/BookingYardin/61568422323510" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/bookingyard" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/bookingyard.in" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/bookingyard-in" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 BookingYard.in. All Rights Reserved.</p>
-    </div>
-</footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
- 

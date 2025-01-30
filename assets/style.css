@@ -2529,21 +2529,108 @@ color: #046c9f;
 #fad {
   color: #59595a;
 }
-
+ 
 .rating {
-  background-color: rgb(0, 122, 12);
-  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color:  rgb(0, 122, 12);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 14px;
   min-width: 26px;
   line-height: 22px;
   height: 22px;
 }
 
-.rating i {
-  color: #f6f7f6;
-  margin: 5px;
-  font-size: 10px;
-  width: 36px;
-  font-weight: 600;
+/* Hidden by default */
+ 
+
+/* Buttons container styles */
+.buttons {
+  display: flex;
+    gap: 4px;
+    margin: 10px;
+    align-content: center;
+    justify-items: stretch;
+    flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Individual button styles */
+.buttons button {
+  flex: 1;
+    background-color: #046c9f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+}
+
+/* Button icon size and spacing */
+.buttons button i {
+  margin-right: 5px;
+}
+
+/* Hover effect */
+.buttons button:hover {
+  background-color: #046c9f; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+/* Active button effect */
+.buttons button:active {
+  transform: translateY(0); /* Neutral position */
+  background-color: #003f7f; /* Even darker blue */
+}
+
+.details {
+  margin-top: 5px;
+  padding: 15px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 1.6;
+   
+  position: relative;
+  overflow: hidden;
+}
+
+.details.hidden {
+  display: none;
+}
+
+.details .address p,
+.details .services ul {
+  margin: 5px 0;
+  line-height: normal;
+  font-size: 15px;
+}
+
+.details .services ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+}
+
+.details .services li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.details .services li i {
+  color: #046c9f;
+  margin-right: 8px;
 }
 

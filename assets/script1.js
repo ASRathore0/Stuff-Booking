@@ -40,7 +40,7 @@ function getCurrentLocation() {
           alert("Sorry, we are not available in your area yet.");
         }
       },
-      error => {
+      function () {
         alert("Unable to retrieve your location.");
       }
     );
@@ -155,9 +155,79 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hide popup after 3 seconds
       setTimeout(() => {
           resultPopup.style.display = "none";
-      }, 4000);
+      }, 2500);
   }
 });
 
+// ---------------------------
 
+function showButtons(card) {
+  // Get the buttons container
+  const buttons = document.querySelector(".buttons");
 
+  // Check if the buttons are already appended to the clicked card
+  if (card.contains(buttons)) {
+      // Toggle visibility if the buttons are already in the clicked card
+      buttons.classList.toggle("hidden");
+  } else {
+      // Remove buttons from any previous card and append to the current one
+      document.querySelectorAll(".service-card").forEach(c => c.querySelector(".buttons")?.remove());
+
+      // Append buttons to the clicked card and show them
+      buttons.classList.remove("hidden");
+      card.appendChild(buttons);
+  }
+}
+
+// ------------------------------------
+
+ // Example details for each card
+ const cardDetails = {
+  Plumber1: {
+      address: "Office Number 9 Second Floor, R K Complex Ludhiana, Grain Market, Khanna HO, Khanna - 141401 (Behind Arora Palace)",
+      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"]
+  },
+  Plumber2: {
+      address: "Plot No 21, Industrial Area Phase 1, Chandigarh - 160002",
+      services: ["Pipes", "Taps", "Valves", "Sinks", "Water Heaters"]
+  }
+};
+
+function showDetails(event, button) {
+  event.stopPropagation(); // Prevent parent click event
+
+  // Get the parent card
+  const card = button.closest('.service-card');
+  const cardId = card.getAttribute('data-card-id'); // Fetch unique card identifier
+
+  // Get the details section within the card
+  const detailsDiv = card.querySelector('.details');
+
+  // Check if details are already visible
+  if (!detailsDiv.classList.contains('hidden')) {
+      detailsDiv.classList.add('hidden');
+      detailsDiv.innerHTML = ""; // Clear the details
+  } else {
+      // Populate details dynamically
+      const details = cardDetails[cardId];
+
+      if (details) {
+          detailsDiv.innerHTML = `
+              <div class="address">
+                  <p><b>Address:</b></p>
+                  <p>${details.address}</p>
+              </div>
+              <div class="services">
+                  <h3>Services</h3>
+                  <ul>
+                      ${details.services.map(service => `<li><i class="fas fa-check-circle"></i> ${service}</li>`).join('')}
+                  </ul>
+              </div>
+          `;
+          detailsDiv.classList.remove('hidden');
+      } else {
+          detailsDiv.innerHTML = `<p>Details not available.</p>`;
+          detailsDiv.classList.remove('hidden');
+      }
+  }
+}
