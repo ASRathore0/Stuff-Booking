@@ -184,13 +184,166 @@ function showButtons(card) {
  // Example details for each card
  const cardDetails = {
   Plumber1: {
-      address: "Office Number 9 Second Floor, R K Complex Ludhiana, Grain Market, Khanna HO, Khanna - 141401 (Behind Arora Palace)",
-      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"]
+      address: "Office Number 9 Second Floor, R K Complex, Grain Market, Nyi Abadi, Khanna - 141401 (Behind Arora Palace)",
+      services: ["Pipes", "Taps", "Valves", "Sink installation", "Water Heaters","drain cleaning"]
   },
   Plumber2: {
-      address: "Plot No 21, Industrial Area Phase 1, Chandigarh - 160002",
-      services: ["Pipes", "Taps", "Valves", "Sinks", "Water Heaters"]
-  }
+      address: "Fatehgarh Sahib, Khanna - 141401",
+      services: [ "Tap Repair", "Valve", "Pipes","Power socket", "Septic Tank", "Sink", "Pipes"]
+  },
+  Electrician1: {
+      address: "Plot No 21, Industrial Area Phase 1, Khanna - 141401",
+      services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"]
+  },
+  Electrician2: {
+      address: "Gulmohar Nagar, Khanna - 141401",
+      services: ["Refrigerator Repair ", "Air Conditioner (AC) Repair", "Washing Machine Repair", "Geyser & Water Heater Repair", " Microwave Oven Repair"]
+  },
+  Cleaner1: {
+      address: "Nyi Abadi, Khanna - 141401",
+      services: ["Curtain Cleaning","Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"]
+  },
+  Cleaner2: {
+      address: "Malerkotla road, Khanna - 141401",
+      services: ["Home Cleaning","Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"]
+  },
+  Gardener1: {
+      address: "Ferozepur Road, Khanna - 141401",
+      services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"]
+  },
+  Gardener2: {
+      address: "Pakhowal Road, Khanna - 141401",
+      services: ["Planting ", "Lawn Mowing & Maintenance", "Fall Cleanup", "Tree Removal"]
+  },
+  Painter1: {
+      address: "Samrala chowk, Khanna - 141401",
+      services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting","Machinery Painting"]
+  },
+  Painter2: {
+      address: "Gt Road, Khanna - 141401",
+      services: ["Wall Painting", "Furniture Painting", "Putty Work", "House Painting", "Wall Crack Filling "]
+  },
+  Carpenter1: {
+      address: "Laheri Road, Khanna - 141401",
+      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"]
+  },
+  Carpenter2: {
+      address: "Model Town, Khanna - 141401",
+      services: ["Furniture Making", "Table", "bed", "Chair"]
+  },
+  Pest1: {
+      address: "Khanna HO- 141401",
+      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"]
+  },
+  Pest2: {
+      address: "Baddi Sitalpur, Khanna - 141401",
+      services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"]
+  },
+  Tution1: {
+      address: "Staion Road, Khanna - 141401",
+      services: ["Basics", "Core Subjects","Mock Exams", "Homework Assistance"]
+  },
+  Tution2: {
+      address: "Jamalpur, Khanna - 141401",
+      services: ["Core Subjects","Study Skills Development", "Basics"]
+  },
+  Family1: {
+      address: "Nyi Abadi, Khanna - 141401",
+      services: ["Routine Check-Ups", "Acute Illness Treatment", "Therapy", "Immunizations"]
+  },
+  Family2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Routine Check-Ups", "Immunizations", "Acute Illness Treatment", "Therapy"]
+  },
+  dj1: {
+      address: "Bhatttian, Khanna - 141401",
+      services: ["smoke machines"]
+  },
+  dj2: {
+      address: "Anant Nagar, Khanna - 141401",
+      services: ["DJ","Trolly"]
+  },
+  Photographer1: {
+      address: "Krishna Nagar, Khanna - 141401",
+      services: ["Weddings", "Fashion Lookbooks","Corporate Events", "Underwater Photography", "Parties ", "Family Portraits"]
+  },
+  Photographer2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Parties ", "Weddings", "Family Portraits", "Corporate Events", "Magazine Shoots"]
+  },
+  Catering1: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Buffet Service", "Plated Service", "Arranging tables, chairs"]
+  },
+  Catering2: {
+      address: "Bhandari park Khanna - 141401",
+      services: ["Plated Service", "Equipment Rental", "Buffet Service"]
+  },
+  Decorator1: {
+      address: "Meena Bazar, Khanna - 141401",
+      services: ["Lighting Design", "Stage", "Welcome Gate"]
+  },
+  Decorator2: {
+      address: "Ahluwalia Mohalla, Khanna - 141401",
+      services: ["Venue Decoration", "Stage", "Lighting Design"]
+  },
+  Tent1: {
+      address: "Libra, Khanna - 141401",
+      services: ["DJ", "Sound","chair & Tables" ,"Lights", "Trolly"]
+  },
+  Tent2: {
+      address: "Doraha, Khanna - 141401",
+      services: ["Sound", "Light", "Stage", "Seating Arrangements"]
+  },
+  Chef1: {
+      address: "Rangia, Khanna - 141401",
+      services: ["Food Consulting", "Restaurant Consulting", "Cooking Services"]
+  },
+  Chef2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Cooking Services", "Food Consulting"]
+  },
+  Jaimala1: {
+      address: "Dehlon, Khanna - 141401",
+      services: ["Stage", "Decoration", "Flowers", "Lightning"]
+  },
+  Jaimala2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Decoration", "Flowers", "Lightning"]
+  },
+  Bride1: {
+      address: "GT Road, Khanna - 141401",
+      services: ["Makeup Services", "Hair Styling", "Nail Services", "Skincare Treatments", "Beard Grooming"]
+  },
+  Bride2: {
+      address: "Samrala Road, Khanna - 141401",
+      services: ["Hair Styling", "Nail Services", "Makeup Services", "Shaving and Beard Grooming", "Facials"]
+  },
+  Vehicles1: {
+      address: "Pratap Calony, Khanna - 141401",
+      services: ["Cars", "Bus", "Taxi", "Auto", "Truck "]
+  },
+  Vehicles2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Bus", "Cars", "Tractor", "Taxi", "Auto", "Truck "]
+  },
+  Bike1: {
+      address: "Libra, Khanna - 141401",
+      services: ["Apache", "Splender", "Scooty", "Yamaha", "cars", "Truck "]
+  },
+  Bike2: {
+      address: "Nyi Abadi, Khanna - 141401",
+      services: ["Pulser", "Apache", "Scooty", "Auto"]
+  },
+  Toto1: {
+      address: "Nyi Abadi, Khanna - 141401",
+      services: []
+  },
+  Toto2: {
+      address: "Amloh Road, Khanna - 141401",
+      services: []
+  },
+  
 };
 
 function showDetails(event, button) {
