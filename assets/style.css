@@ -1972,6 +1972,7 @@ h1 {
 
 p, h2 {
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .application-form input,
@@ -2458,12 +2459,41 @@ color: #046c9f;
 /* ---------------------------- */
  
 .services-section {
-  padding: 10px;
+  padding: 8px;
 }
 
-.services-section h2 {
-  margin-bottom: 15px;
-  margin-top: 15px;
+.services-section h2{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .services-section h2 {
+  margin-left: 300px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+/* Ensure 3 cards on desktop and 1 on mobile */
+@media (min-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 300px;
+    
+  }
+}
+
+@media (max-width: 767px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
@@ -2473,7 +2503,6 @@ color: #046c9f;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.393);
-  margin-bottom: 20px;
 }
 
 .service-card .service-image {
@@ -2481,7 +2510,7 @@ color: #046c9f;
 }
 
 .service-card .service-image img {
-  width: 100%;
+  width: 120%;
   height: 180px;
   object-fit: cover;
 }
@@ -2534,7 +2563,7 @@ color: #046c9f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:  rgb(0, 122, 12);
+  background-color: rgb(0, 122, 12);
   color: #fff;
   padding: 2px 6px;
   border-radius: 5px;
@@ -2550,12 +2579,13 @@ color: #046c9f;
 /* Buttons container styles */
 .buttons {
   display: flex;
-    gap: 4px;
-    margin: 10px;
-    align-content: center;
-    justify-items: stretch;
-    flex-wrap: wrap;
+  gap: 4px;
+  margin: 10px;
+  align-content: center;
+  justify-items: stretch;
+  flex-wrap: wrap;
 }
+
 
 .hidden {
   display: none;
