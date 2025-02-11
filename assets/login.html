@@ -7,159 +7,325 @@
   <title>BookingYard - Login / Sign Up</title>
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-   
-
 </head>
 <body>
-
-   <!-- Header Section -->
-  <header>
-    <div class="logo">BookingYard.in</div>
-    <button class="cta" onclick="showNoticeBoard()">Get App</button>
-    <button class="toggle-button" onclick="toggleMenu()">☰</button>
-  </header>
-
-  <!-- Sidebar Menu -->
-<div class="sidebar" id="sidebar">
-  <a href="/index.html">About Us</a>
-  <a href="/assets/other.html">F&Q</a>
-  <a href="/assets/login.html">Help & Support</a>
-  <a href="/assets/login.html">We are hiring</a>
-  <!-- Add more links as needed -->
-</div>
-
-       <!-- Notice Board Modal -->
-<div id="notice-board" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeNoticeBoard()">&times;</span>
-      <h2>Thank You!</h2>
-      <p>Thank you for showing your interest. The app is about to launch soon. Stay tuned!</p>
-    </div>
-  </div>
-
-  <!-- Main Container -->
-  <div class="auth-container">
-    <div class="auth-card">
-      
-      <!-- Tab Toggle for Login / Sign Up -->
-      <div class="auth-tabs">
-        <button id="login-tab" onclick="toggleAuth('login')" class="active">Login</button>
-        <button id="signup-tab" onclick="toggleAuth('signup')">Sign Up</button>
-      </div>
-
-      <!-- Profile Toggle (User / Vendor) -->
-      <div class="profile-toggle">
-        <button id="user-toggle" onclick="showFormType('user')" class="active">User</button>
-        <button id="vendor-toggle" onclick="showFormType('vendor')">Vendor</button>
-      </div>
-
-      <!-- Login Form -->
-      <form id="login-form" class="auth-form">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-
-      <!-- Sign Up Form -->
-      <form id="signup-form" class="auth-form" style="display: none;">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
-      </form>
-
-    </div>
-  </div>
-
-  <footer id="footer">
-    <div class="footer-links">
-      <a href="/" class="footer-button" id="home-button">
-        <i class="fa fa-house icon"></i>
-        <span>Home</span>
-      </a>
-      <a href="/index.html" class="footer-button" id="explore-button">
-        <i class="fa fa-compass icon"></i>
-        <span>Explore</span>
-      </a>
-      <a href="/assets/other.html" class="footer-button" id="cart-button">
-        <i class="fa fa-handshake icon"></i>
-      <span>Others</span>
-      </a>
-      <a href="/assets/login.html" class="footer-button" id="profile-button">
-        <i class="fa fa-user icon"></i>
-        <span>Profile</span>
-      </a>
-    </div>
-  </footer>
-
-  <footer class="modern-footer">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <h2>BookingYard<span>.in</span></h2>
-            <p>Your all-in-one platform for seamless event bookings.</p>
+    <style> /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #046c9f;
+        }
+        
+        /* Main Container */
+        .container {
+            display: flex;
+            width: 900px;
+            height: 550px;
+            background: white;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* Left Section - Image */
+        .left {
+            width: 50%;
+            background: url('/image/bookingyard.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .left h1 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .left p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Right Section - Login/Register */
+        .right {
+            width: 50%;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .right h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #046c9f;
+        }
+        
+        .input-group {
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #046c9f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .forgot-password {
+            display: block;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #046c9f;
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .social-login button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .google {
+            background: #db4437;
+            color: white;
+        }
+        
+        .apple {
+            background: black;
+            color: white;
+        }
+        
+        a {
+            color: #046c9f;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        /* For Tablets (Below 1024px) */
+        @media screen and (max-width: 1024px) {
+            .container {
+                width: 90%;
+                height: auto;
+                flex-direction: column;
+            }
+        
+            .left {
+                width: 100%;
+                height: 200px;
+                background-size: cover;
+            }
+        
+            .right {
+                width: 100%;
+        
+            }
+        
+            .btn {
+                font-size: 16px;
+                padding: 10px;
+            }
+        
+            .input-group input {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+        
+        /* For Mobile (Below 768px) */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        
+            .left {
+                display: none; /* Hide image section */
+            }
+        
+            .right {
+                width: 100%;
+        
+            }
+        
+            .right h2 {
+                font-size: 20px;
+            }
+        
+            .input-group input {
+                font-size: 14px;
+                padding: 10px;
+            }
+        
+            .btn {
+                font-size: 16px;
+                padding: 12px;
+            }
+        
+            .social-login {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+        </style>
+    <div class="container">
+        <!-- Left Section (Image & Branding) -->
+        <div class="left">
+             
         </div>
 
-        <div class="footer-links">
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/assets/about.html">About Us</a></li>
-                    <li><a href="/assets/hiring.html">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="/assets/support.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Home Services</a></li>
-                    <li><a href="#">Cab</a></li>
-                    <li><a href="#">Hotels</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="/assets/support.html">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Quick Links</h4>
-              <ul>
-                  <li><a href="#">Knowledge</a></li>
-                  <li><a href="#">Return & Refund</a></li>
-                  <li><a href="#">Track Order</a></li>
-                  <li><a href="/assets/support.html">Download App</a></li>
-              </ul>
-          </div>
-        </div>
+        <!-- Right Section (Login & Register) -->
+        <div class="right">
+            <!-- Login Form -->
+            <div id="loginSection">
+                <h2>Welcome Back</h2>
+                <p>Login with Email</p>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <a href="#" class="forgot-password">Forgot your password?</a>
 
-        <div class="footer-newsletter">
-            <h4>Stay Connected</h4>
-            <p>Sign up for our newsletter to get the latest updates and offers.</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required />
-                <button type="submit">Subscribe</button>
-            </form>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/people/BookingYardin/61568422323510" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/bookingyard" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/bookingyard.in" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/bookingyard-in" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <p>Or login with</p>
+                <div class="social-login">
+                    <button class="google">Google</button>
+                    <button class="apple">Apple</button>
+                </div>
+
+                <p>Don’t have an account? <a href="#" id="showRegister">Register Now</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerSection" style="display: none;">
+                <h2>Create an Account</h2>
+                <p>Register with Email</p>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="registerEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 BookingYard.in. All Rights Reserved.</p>
-    </div>
-</footer>
-
-  <script src="script.js"></script>
-  <script src="script1.js"></script>
+    <script>// Toggle between Login & Register
+        document.getElementById("showRegister").addEventListener("click", function() {
+            document.getElementById("loginSection").style.display = "none";
+            document.getElementById("registerSection").style.display = "block";
+        });
+        
+        document.getElementById("showLogin").addEventListener("click", function() {
+            document.getElementById("loginSection").style.display = "block";
+            document.getElementById("registerSection").style.display = "none";
+        });
+        
+        // Login Form Submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+        
+            if (email.trim() === "" || password.trim() === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+        
+            if (email === "user@example.com" && password === "password123") {
+                alert("Login successful!");
+                window.location.href = "dashboard.html"; 
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+        
+        // Register Form Submission
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById("fullName").value;
+            const email = document.getElementById("registerEmail").value;
+            const password = document.getElementById("registerPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+        
+            if (fullName.trim() === "" || email.trim() === "" || password.trim() === "" || confirmPassword.trim() === "") {
+                alert("All fields are required!");
+                return;
+            }
+        
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+        
+            alert("Registration successful!");
+        });
+        </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
