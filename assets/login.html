@@ -22,8 +22,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 95vh;
-            background-color: #046c9f;
+            margin-top: 380px;
+            background-color: #046c9f; 
+    
         }
         
         /* Main Container */
@@ -38,6 +39,13 @@
             position: fixed;
         }
 
+        .toggle-password {
+            position: relative;
+            margin-left: 20rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
         
         /* Left Section - Image */
         .left {
@@ -61,7 +69,7 @@
             font-size: 14px;
             opacity: 0.9;
         }
-        
+ 
         /* Right Section - Login/Register */
         .right {
             width: 50%;
@@ -95,13 +103,14 @@
             border: 1px solid #046c9f;
             border-radius: 5px;
         }
+        
         .input-group i {
             position: absolute;
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 18px;
-            color: #0073e6;
+            color: #8f9192;
         }
         
         .btn {
@@ -115,11 +124,21 @@
             cursor: pointer;
             margin-top: 5px;
         }
-        
-        .btn:hover {
-            background: #0056b3;
+
+        .or {
+            margin: 15px 0;
+            
+            width:50%; 
+            text-align:center; 
+            border-bottom: 1px solid #6b6969; 
+            line-height:0.1em; 
+            margin:25px 4.5rem 25px; 
         }
-        
+
+        .or span { background:#fff; 
+            padding:0 5px; 
+          }
+         
         .forgot-password {
             display: block;
             margin: 10px 0;
@@ -147,18 +166,16 @@
         }
         
         .google {
-            background: #db4437;
-            color: white;
+            background: #d5f0f3;
+             
         }
         
         .apple {
-            background: black;
-            color: white;
+            background: #d5f0f3;
         }
 
         .facebook {
-            background: #3b5998;
-            color: white;
+            background: #d5f0f3;
         }
         
         a {
@@ -209,8 +226,14 @@
                 flex-direction: column;
                 box-shadow: none;
                 border-radius: 0;
-                
+            }
 
+            .toggle-password {
+            position: relative;
+            margin-left: 16.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
             }
         
             .left {
@@ -241,7 +264,7 @@
             }
             .city-icons {
                 width: 100vw;
-                height: 70px; /* Adjust based on the image */
+                height: 120px; /* Adjust based on the image */
                 background: url('/image/buiding.jpg') no-repeat center bottom;
                 background-size: cover;
                 position: absolute;
@@ -271,16 +294,17 @@
                     <div class="input-group">
                         <label>Password</label>
                         <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
                     </div>
                     <button type="submit" class="btn">Login</button>
                 </form>
                 <a href="#" class="forgot-password">Forgot your password?</a>
 
-                <p>Or login with</p>
+                <p class="or"> <span> OR</span></p>
                 <div class="social-login">
-                    <button class="google"><i class="fab fa-google"></i></button>
-                    <button class="facebook"><i class="fab fa-facebook-f"></i></button>
-                    <button class="apple"><i class="fab fa-apple"></i></button>
+                    <button class="google"><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" height="35px" alt=""></button>
+                    <button class="facebook"><img src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" height="40px" alt=""></button>
+                    <button class="apple"><img src="https://cdn-icons-png.flaticon.com/512/25/25345.png" height="27px" alt=""></button>
                 </div>
 
                 <p>Don’t have an account? <a href="#" id="showRegister">Register Now</a></p>
@@ -304,7 +328,7 @@
                     </div>
                     <div class="input-group">
                         <label>Password</label> 
-                        <input type="password" id="registerPassword" placeholder="Create your password" required>
+                        <input type="password" id="registerPassword" placeholder="Enter your password" required>
                     </div>
                     <div class="input-group">
                         <label>Confirm Password</label> 
@@ -369,6 +393,20 @@
         
             alert("Registration successful!");
         });
+
+        function togglePassword() {
+            var passwordField = document.getElementById("loginPassword");
+            var icon = document.querySelector(".toggle-password");
+            if (passwordField.type === "loginPassword") {
+                passwordField.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "loginPassword ";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
         </script>
     
     <script src="script.js"></script>
