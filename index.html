@@ -1052,11 +1052,18 @@
 
   <!-- Buttons -->
   <div class="buttons hidden">
-      <button><i class="fas fa-phone"></i> Call</button>
-      <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
-      <button><i class="fas fa-map-marker-alt"></i> Direction</button>
-      <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
-  </div>
+    <button onclick="makeCall()"><i class="fas fa-phone"></i> Call</button>
+    <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
+    <button><i class="fas fa-map-marker-alt"></i> Direction</button>
+    <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
+</div>
+
+<script>
+function makeCall() {
+    window.location.href = "tel:+1234567890"; // Replace with actual phone number
+}
+</script>
+
 </div>
 </div>
     
