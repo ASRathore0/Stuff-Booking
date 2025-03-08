@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
-    
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -24,7 +25,6 @@
             margin: 20px auto;
             border-radius: 10px;
             position: relative;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Back icon styling */
@@ -55,7 +55,7 @@
             font-size: 40px;
             font-weight: bold;
             color: white;
-            border: 2px solid #ddd;
+            border: 2px solid #046c9f;
             overflow: hidden;
         }
 
@@ -105,7 +105,8 @@
             position: relative;
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
@@ -115,7 +116,8 @@
             box-sizing: border-box;
         }
 
-        input, text{
+        input,
+        text {
             color: #333;
         }
 
@@ -139,34 +141,35 @@
             color: #777;
         }
 
-            button {
-                width: 70%;
-                margin-top: 20px;
-                background-color: #046c9f;
-                color: white;
-                padding: 10px;
-                font-size: 18px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-        
+        button {
+            width: 70%;
+            margin-top: 20px;
+            background-color: #046c9f;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
 
         button:hover {
             background-color: #34495e;
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <!-- Back Icon -->
         <i class="fas fa-arrow-left back-icon" onclick="goBack()"></i>
-        
+
         <h2>Edit Profile</h2>
 
         <div class="profile-pic-container" id="profile-container">
@@ -218,11 +221,11 @@
         }
 
         // Image Upload Functionality
-        document.getElementById('file-input').addEventListener('change', function(event) {
+        document.getElementById('file-input').addEventListener('change', function (event) {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     document.getElementById('profile-pic').src = e.target.result;
                     document.getElementById('profile-pic').style.display = "block";
                     document.getElementById('avatar-text').style.display = "none";
@@ -263,4 +266,5 @@
     </script>
 
 </body>
+
 </html>
