@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Back icon styling */
+        .back-icon {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        /* Profile Picture Container */
+        .profile-pic-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ccc;
+            border-radius: 50%;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #ddd;
+            overflow: hidden;
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        /* Camera icon styling */
+        .upload-icon {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: white;
+            border-radius: 50%;
+            padding: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #046c9f;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #046c9f;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input, text{
+            color: #333;
+        }
+
+        /* Edit icon styling */
+        .edit-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #777;
+        }
+
+        /* Password eye icon styling */
+        .eye-icon {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #777;
+        }
+
+            button {
+                width: 70%;
+                margin-top: 20px;
+                background-color: #046c9f;
+                color: white;
+                padding: 10px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+        
+
+        button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Back Icon -->
+        <i class="fas fa-arrow-left back-icon" onclick="goBack()"></i>
+        
+        <h2>Edit Profile</h2>
+
+        <div class="profile-pic-container" id="profile-container">
+            <span id="avatar-text">Pic</span>
+            <img id="profile-pic" alt="Profile Picture">
+            <input type="file" id="file-input" accept="image/*">
+            <label for="file-input" class="upload-icon">
+                <i class="fas fa-camera"></i>
+            </label>
+        </div>
+
+        <form>
+            <!-- Name Field with Edit Icon -->
+            <label>Name</label>
+            <div class="input-container">
+                <input type="text" id="name" value="Melissa Peters" oninput="updateAvatar()">
+                <i class="fas fa-edit edit-icon" onclick="editField('name')"></i>
+            </div>
+
+            <!-- Email Field (No edit allowed) -->
+            <label>Email</label>
+            <input type="email" value="melpeters@gmail.com" readonly>
+
+            <!-- Password Field with Eye Icon and Edit Icon -->
+            <label>Password</label>
+            <div class="input-container">
+                <input type="password" id="password" value="password123">
+                <i class="fas fa-eye eye-icon" onclick="togglePassword()"></i>
+                <i class="fas fa-edit edit-icon" onclick="editField('password')"></i>
+            </div>
+
+            <label>Date of Birth</label>
+            <input type="date" value="1995-05-23">
+
+            <label>Country/Region</label>
+            <select>
+                <option selected>India</option>
+                <option>India</option>
+            </select>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        // Go Back Function
+        function goBack() {
+            window.history.back();
+        }
+
+        // Image Upload Functionality
+        document.getElementById('file-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-pic').src = e.target.result;
+                    document.getElementById('profile-pic').style.display = "block";
+                    document.getElementById('avatar-text').style.display = "none";
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Password Show/Hide Toggle
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const eyeIcon = document.querySelector('.eye-icon');
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+
+        // Edit Field Function
+        function editField(fieldId) {
+            const field = document.getElementById(fieldId);
+            field.removeAttribute("readonly");
+            field.focus();
+        }
+
+        // Update Avatar Initials
+        function updateAvatar() {
+            const name = document.getElementById('name').value.trim();
+            const initials = name.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2);
+            document.getElementById('avatar-text').innerText = initials || "MP";
+        }
+    </script>
+
+</body>
+</html>
