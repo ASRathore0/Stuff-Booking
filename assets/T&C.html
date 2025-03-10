@@ -36,8 +36,8 @@
         }
 
         .logo img {
-            width: 40px;
-            height: 40px;
+            width: 300px;
+            height: 60px;
             margin-right: 10px;
         }
 
@@ -48,17 +48,17 @@
         }
 
         .menu .hamburger {
-            font-size: 24px;
+            font-size: 30px;
             cursor: pointer;
         }
 
         /* Terms Section */
         .terms {
             max-width: 800px;
-            margin: 30px auto;
+            margin: 0 auto;
             padding: 20px;
-            text-align: left;
-        }
+            text-align: justify;
+         }
 
         .terms h1 {
             text-align: center;
@@ -82,6 +82,7 @@
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 10px;
+            content: justify;
         }
 
         .terms a {
@@ -96,7 +97,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .terms {
-                padding: 15px;
+                padding: 20px;
             }
 
             .terms h1 {
@@ -117,16 +118,16 @@
             }
 
             .logo img {
-                width: 30px;
-                height: 30px;
+                width: 300px;
+                height: 60px;
             }
 
             .logo span {
-                font-size: 16px;
+                font-size: 50px;
             }
 
             .menu .hamburger {
-                font-size: 20px;
+                font-size: 30px;
             }
         }
     </style>
@@ -135,11 +136,11 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./logo.jpg" alt="">
-            <span>BookingYard.in</span>
+            <img src="/image/lg.jpg" alt="">
+            <span></span>
         </div>
         <div class="menu">
-            <div class="hamburger">&#9776;</div>
+            <div class="hamburger" onclick="goBack()">x</div>
         </div>
     </header>
 
@@ -257,9 +258,10 @@
     </section>
 
     <script>
-        document.querySelector('.hamburger').addEventListener('click', function () {
-            alert('Menu Clicked!');
-        });
+        // Go Back Function
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 
