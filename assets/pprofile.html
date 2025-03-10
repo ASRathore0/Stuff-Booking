@@ -18,7 +18,7 @@
         }
 
         .container {
-            width: 100%;
+            width: 90%;
             max-width: 400px;
             background: white;
             padding: 20px;
@@ -38,7 +38,8 @@
         }
 
         h2 {
-            margin-bottom: 15px;
+            margin: 0;
+            font-size: larger;
         }
 
         /* Profile Picture Container */
@@ -57,6 +58,7 @@
             color: white;
             border: 2px solid #046c9f;
             overflow: hidden;
+            margin-top: 15px;
         }
 
         .profile-pic-container img {
@@ -142,7 +144,7 @@
         }
 
         button {
-            width: 70%;
+            width: 100%;
             margin-top: 20px;
             background-color: #046c9f;
             color: white;
@@ -155,6 +157,29 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Mobile adjustments */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    .back-icon {
+        left: 10px;
+        font-size: 18px;
+    }
+
+    .profile-pic-container {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
 
 
 
