@@ -1052,29 +1052,11 @@
 
    <!-- Buttons -->
   <div class="buttons hidden">
-    <button onclick="makeCall()"><i class="fas fa-phone"></i> Call</button>
-    <button onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-    <button onclick="openDirections()"><i class="fas fa-map-marker-alt"></i> Direction</button>
+    <button onclick="makeCall('${cardId}')"><i class="fas fa-phone"></i> Call</button>
+    <button onclick="openWhatsApp('${cardId}')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+    <button onclick="openGoogleMaps('${cardId}')"><i class="fas fa-map-marker-alt"></i> Direction</button>
     <button onclick="showDetails(event, this)"><i class="fas fa-star"></i> Overview</button>
 </div>
-
-<script>
-function makeCall() {
-    window.location.href = "tel:+1234567890"; // Replace with actual phone number
-}
-
-function openWhatsApp() {
-    var phoneNumber = "1234567890"; // Replace with actual WhatsApp number
-    window.location.href = "https://wa.me/" + phoneNumber;
-}
-
-function openDirections() {
-    var latitude = "Khanna, ludhiana";  // Replace with actual latitude
-    // var longitude = "76.218406"; // Replace with actual longitude
-    window.location.href = "https://www.google.com/maps?q=" + latitude;
-}
-</script>
-
 </div>
 </div>
     
