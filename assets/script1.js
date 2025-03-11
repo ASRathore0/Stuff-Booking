@@ -185,19 +185,23 @@ function showButtons(card) {
  const cardDetails = {
   Plumber1: {
       address: "Office Number 9 Second Floor, R K Complex, Grain Market, Nyi Abadi, Khanna - 141401 (Behind Arora Palace)",
-      services: ["Pipes", "Taps", "Valves", "Sink installation", "Water Heaters","drain cleaning"]
+      services: ["Pipes", "Taps", "Valves", "Sink installation", "Water Heaters","drain cleaning"],
+      contact: "+91 9876543210"
   },
   Plumber2: {
       address: "Fatehgarh Sahib, Khanna - 141401",
-      services: [ "Tap Repair", "Valve", "Pipes","Power socket", "Septic Tank", "Sink", "Pipes"]
+      services: [ "Tap Repair", "Valve", "Pipes","Power socket", "Septic Tank", "Sink", "Pipes"],
+      contact: "+91 9988776655"
   },
   Electrician1: {
       address: "Plot No 21, Industrial Area Phase 1, Khanna - 141401",
-      services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"]
+      services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 9988776655"
   },
   Electrician2: {
       address: "Gulmohar Nagar, Khanna - 141401",
-      services: ["Refrigerator Repair ", "Air Conditioner (AC) Repair", "Washing Machine Repair", "Geyser & Water Heater Repair", " Microwave Oven Repair"]
+      services: ["Refrigerator Repair ", "Air Conditioner (AC) Repair", "Washing Machine Repair", "Geyser & Water Heater Repair", " Microwave Oven Repair"],
+      contact: "+91 8809296250"
   },
   Cleaner1: {
       address: "Nyi Abadi, Khanna - 141401",
@@ -345,6 +349,60 @@ function showButtons(card) {
   },
   
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all service cards
+    document.querySelectorAll(".service-card").forEach(card => {
+        card.addEventListener("click", function () {
+            const cardId = card.getAttribute("data-card-id");
+
+            // Get the common buttons container
+            const buttonsContainer = document.querySelector(".buttons");
+
+            // Update onclick events to reference the selected cardId
+            buttonsContainer.querySelector("button:nth-child(1)").setAttribute("onclick", `makeCall('${cardId}')`);
+            buttonsContainer.querySelector("button:nth-child(2)").setAttribute("onclick", `openWhatsApp('${cardId}')`);
+            buttonsContainer.querySelector("button:nth-child(3)").setAttribute("onclick", `openGoogleMaps('${cardId}')`);
+
+            // Show the buttons if hidden
+            buttonsContainer.classList.remove("hidden");
+        });
+    });
+});
+
+// Function to make a call
+function makeCall(cardId) {
+    const phoneNumber = cardDetails[cardId]?.contact || "Not available";
+
+    if (phoneNumber !== "Not available") {
+        window.location.href = `tel:${phoneNumber}`;
+    } else {
+        alert("Phone number not available.");
+    }
+}
+
+// Function to open WhatsApp chat
+function openWhatsApp(cardId) {
+    const phoneNumber = cardDetails[cardId]?.contact || "";
+
+    if (phoneNumber) {
+        window.location.href = `https://wa.me/${phoneNumber.replace("+", "")}`;
+    } else {
+        alert("WhatsApp number not available.");
+    }
+}
+
+// Function to open Google Maps for directions
+function openGoogleMaps(cardId) {
+    const address = cardDetails[cardId]?.address || "";
+
+    if (address) {
+        const encodedAddress = encodeURIComponent(address);
+        window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, "_blank");
+    } else {
+        alert("Address not available.");
+    }
+}
 
 function showDetails(event, button) {
   event.stopPropagation(); // Prevent parent click event
