@@ -349,7 +349,7 @@ function showButtons(card) {
   },
 // Siwan location
    Plumber51: {
-      address: "Amloh Road, siwan - 141401",
+      address: "Amloh Road, Siwan - 141401",
       services: ["Tap", "sink"]
   },
   
