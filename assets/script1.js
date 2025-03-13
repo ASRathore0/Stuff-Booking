@@ -347,6 +347,11 @@ function showButtons(card) {
       address: "Amloh Road, Khanna - 141401",
       services: []
   },
+// Siwan location
+   Plumber51: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Tap", "sink"]
+  },
   
 };
 
