@@ -355,7 +355,7 @@ function showButtons(card) {
   },
   Plumber52: {
       address: "Purani Quila, Siwan - 841226",
-      services: ["Tap", "sink"],
+      services: ["Tap", "sink", "Tank", "Pipe"],
       contact: "+91 07947428985"
   }, 
   
