@@ -363,6 +363,11 @@ function showButtons(card) {
       services: ["Drain cleaning", "Tap", "sink"],
       contact: "+91 07947129036"
   }, 
+  Electrician50: {
+      address: "Siwan HO, Siwan - 841226",
+      services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 07947129036"
+  }, 
   
 };
 
