@@ -348,11 +348,16 @@ function showButtons(card) {
       services: []
   },
 // Siwan location
-   Plumber51: {
+  Plumber51: {
       address: "Siwan HO, Siwan - 841226",
       services: ["Tap", "sink"],
       contact: "+91 07947431168"
   },
+  Plumber52: {
+      address: "Purani Quila, Siwan - 841226",
+      services: ["Tap", "sink"],
+      contact: "+91 07947428985"
+  }, 
   
 };
 
