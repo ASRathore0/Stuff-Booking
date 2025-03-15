@@ -358,6 +358,11 @@ function showButtons(card) {
       services: ["Tap", "sink", "Tank", "Pipe"],
       contact: "+91 07947428985"
   }, 
+  Plumber53: {
+      address: "Siwan HO, Siwan - 841226",
+      services: ["Drain cleaning", "Tap", "sink"],
+      contact: "+91 07947129036"
+  }, 
   
 };
 
