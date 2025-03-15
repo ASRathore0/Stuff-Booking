@@ -349,8 +349,9 @@ function showButtons(card) {
   },
 // Siwan location
    Plumber51: {
-      address: "Amloh Road, Siwan - 141401",
-      services: ["Tap", "sink"]
+      address: "Siwan HO, Siwan - 841226",
+      services: ["Tap", "sink"],
+      contact: "+91 07947431168"
   },
   
 };
