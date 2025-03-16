@@ -359,20 +359,40 @@ function showButtons(card) {
       contact: "+91 08147794876"
   },
   Plumber52: {
-      address: "Ram Kishor Plumbing Contractor, Shiv Mandir Vali Gali, Tugalpur, Greater Noida - 201310 (Behind Ansal Plaza), Delhi NCR",
+      address: "Ram Kishor Plumbing Contractor, Shiv Mandir Vali Gali, Tugalpur, Greater Noida - 201310 (Behind Ansal Plaza)",
       services: ["Tap", "sink", "Tank", "Pipe"],
       contact: "+91 07411848722"
   }, 
   Plumber53: {
-      address: "Hno 1778, Sector 16, Faridabad Sector 16, Faridabad - 121002 (Near Pawan Dairy), Delhi NCR",
+      address: "Hno 1778, Sector 16, Faridabad Sector 16, Faridabad - 121002 (Near Pawan Dairy)",
       services: ["Drain cleaning", "Tap", "sink"],
       contact: "+91 09036209680"
   }, 
   Electrician51: {
-      address: "Siwan HO, Delhi NCR",
+      address: "Gaurav Electrician, Dlf Phase 1, Gurgaon Sector 18, Gurgaon - 122015 (Gurugram Sector 18)",
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 07947129036"
+      contact: "+91 07487988790"
   },
+  Electrician52: {
+      address: "Dayal Public School, Gurgaon Sector 28, Gurgaon - 122002 (Near Dayal Public School)",
+      services: ["Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 09724979586"
+  },
+  Electrician53: {
+      address: "Office No-71, Pkt-2, Rohini Sector 24, Delhi - 110085 (Near DPS)",
+      services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 07947434809"
+  },
+  Electrician54: {
+      address: "113, Model Basti, Karol Bagh, Delhi - 110005 (Near Filmistan Cinema)",
+      services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 08867845671"
+  },
+  Electrician55: {
+      address: "Building No.- B 415, Ghaziabad, Ghaziabad Maliwara, Ghaziabad - 201001 (Near Maliwara Chowk)",
+      services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 08460298602"
+  }, 
 
 
    
