@@ -347,23 +347,54 @@ function showButtons(card) {
       address: "Amloh Road, Khanna - 141401",
       services: []
   },
-// Siwan location
+
+
+
+   
+// Delhi location
+   
   Plumber51: {
-      address: "Siwan HO, Siwan - 841226",
+      address: "Siwan HO, Delhi - 841226",
       services: ["Tap", "sink"],
       contact: "+91 07947431168"
   },
   Plumber52: {
-      address: "Purani Quila, Siwan - 841226",
+      address: "Purani Quila, Delhi - 841226",
       services: ["Tap", "sink", "Tank", "Pipe"],
       contact: "+91 07947428985"
   }, 
   Plumber53: {
+      address: "Siwan HO, Delhi - 841226",
+      services: ["Drain cleaning", "Tap", "sink"],
+      contact: "+91 07947129036"
+  }, 
+  Electrician51: {
+      address: "Siwan HO, Delhi - 841226",
+      services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
+      contact: "+91 07947129036"
+  },
+
+
+   
+   
+// Siwan location
+   
+  Plumber501: {
+      address: "Siwan HO, Siwan - 841226",
+      services: ["Tap", "sink"],
+      contact: "+91 07947431168"
+  },
+  Plumber502: {
+      address: "Purani Quila, Siwan - 841226",
+      services: ["Tap", "sink", "Tank", "Pipe"],
+      contact: "+91 07947428985"
+  }, 
+  Plumber503: {
       address: "Siwan HO, Siwan - 841226",
       services: ["Drain cleaning", "Tap", "sink"],
       contact: "+91 07947129036"
   }, 
-  Electrician50: {
+  Electrician501: {
       address: "Siwan HO, Siwan - 841226",
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
       contact: "+91 07947129036"
