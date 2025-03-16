@@ -354,22 +354,22 @@ function showButtons(card) {
 // Delhi location
    
   Plumber51: {
-      address: "E 37 Khirki Extension, Malviya Nagar, Delhi - 110017 (Near Select City Mall), Delhi",
+      address: "E 37 Khirki Extension, Malviya Nagar, Delhi - 110017 (Near Select City Mall), Delhi NCR",
       services: ["Tap", "sink", "Tank"],
       contact: "+91 08147794876"
   },
   Plumber52: {
-      address: "Ram Kishor Plumbing Contractor, Shiv Mandir Vali Gali, Tugalpur, Greater Noida - 201310 (Behind Ansal Plaza), Delhi",
+      address: "Ram Kishor Plumbing Contractor, Shiv Mandir Vali Gali, Tugalpur, Greater Noida - 201310 (Behind Ansal Plaza), Delhi NCR",
       services: ["Tap", "sink", "Tank", "Pipe"],
       contact: "+91 07411848722"
   }, 
   Plumber53: {
-      address: "Hno 1778, Sector 16, Faridabad Sector 16, Faridabad - 121002 (Near Pawan Dairy), Delhi",
+      address: "Hno 1778, Sector 16, Faridabad Sector 16, Faridabad - 121002 (Near Pawan Dairy), Delhi NCR",
       services: ["Drain cleaning", "Tap", "sink"],
       contact: "+91 09036209680"
   }, 
   Electrician51: {
-      address: "Siwan HO, Delhi - 841226",
+      address: "Siwan HO, Delhi NCR",
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
       contact: "+91 07947129036"
   },
