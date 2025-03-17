@@ -178,7 +178,15 @@
     const referralCode = "E1D8756F"; // Your referral code
     const shareData = {
         title: "Join BookingYard & Earn Cashback!",
-        text: `Become a vender with BookingYard.in using my referral code: ${referralCode} and win up to ₹50 cashback!`,
+        text: `*Hi! I'm inviting you to join BookingYard!*
+
+BookingYard is the easiest way to connect with top service providers and expand your business.
+
+Use my referral code: ${referralCode} or click the link below to sign up and start booking hassle-free.
+
+💰 Win up to ₹50 Cashback on your first successful registration if you're new to BookingYard!
+
+Join now and grow with India's trusted booking platform:\n`,
         url: "https://bookingyard.in/assets/vender.html",
     };
 
@@ -192,7 +200,15 @@
     // WhatsApp Share
     document.querySelector(".whatsapp").addEventListener("click", function() {
         const referralCode = "E1D8756F";
-        const message = `Join BookingYard & Earn Cashback! Sign up using my referral code: ${referralCode} and win up to ₹50 cashback! \nhttps://bookingyard.in/assets/vender.html`;
+        const message = `*Hi! I'm inviting you to join BookingYard!*
+
+BookingYard is the easiest way to connect with top service providers and expand your business.
+
+Use my referral code: ${referralCode} or click the link below to sign up and start booking hassle-free.
+
+💰 Win up to ₹50 Cashback on your first successful registration if you're new to BookingYard!
+
+Join now and grow with India's trusted booking platform: \nhttps://bookingyard.in/assets/vender.html`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
     });
@@ -200,7 +216,15 @@
     // SMS Share
     document.querySelector(".sms").addEventListener("click", function() {
         const referralCode = "E1D8756F";
-        const message = `Join BookingYard & Earn Cashback! Sign up using my referral code: ${referralCode} and win up to ₹50 cashback! \nhttps://bookingyard.in/assets/vender.html`;
+        const message = `*Hi! I'm inviting you to join BookingYard!*
+
+BookingYard is the easiest way to connect with top service providers and expand your business.
+
+Use my referral code: ${referralCode} or click the link below to sign up and start booking hassle-free.
+
+💰 Win up to ₹50 Cashback on your first successful registration if you're new to BookingYard!
+
+Join now and grow with India's trusted booking platform: \nhttps://bookingyard.in/assets/vender.html`;
         const smsUrl = `sms:?&body=${encodeURIComponent(message)}`;
         window.open(smsUrl, "_blank");
     });
