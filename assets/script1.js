@@ -205,147 +205,183 @@ function showButtons(card) {
   },
   Cleaner1: {
       address: "Nyi Abadi, Khanna - 141401",
-      services: ["Curtain Cleaning","Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"]
+      services: ["Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
+      contact: "+91 0000000000"
   },
   Cleaner2: {
       address: "Malerkotla road, Khanna - 141401",
-      services: ["Home Cleaning","Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"]
+      services: ["Home Cleaning", "Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"],
+      contact: "+91 0000000000"
   },
   Gardener1: {
       address: "Ferozepur Road, Khanna - 141401",
-      services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"]
+      services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"],
+      contact: "+91 0000000000"
   },
   Gardener2: {
       address: "Pakhowal Road, Khanna - 141401",
-      services: ["Planting ", "Lawn Mowing & Maintenance", "Fall Cleanup", "Tree Removal"]
+      services: ["Planting ", "Lawn Mowing & Maintenance", "Fall Cleanup", "Tree Removal"],
+      contact: "+91 0000000000"
   },
   Painter1: {
-      address: "Samrala chowk, Khanna - 141401",
-      services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting","Machinery Painting"]
+      address: "Samrala Chowk, Khanna - 141401",
+      services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting", "Machinery Painting"],
+      contact: "+91 0000000000"
   },
   Painter2: {
       address: "Gt Road, Khanna - 141401",
-      services: ["Wall Painting", "Furniture Painting", "Putty Work", "House Painting", "Wall Crack Filling "]
+      services: ["Wall Painting", "Furniture Painting", "Putty Work", "House Painting", "Wall Crack Filling "],
+      contact: "+91 0000000000"
   },
   Carpenter1: {
       address: "Laheri Road, Khanna - 141401",
-      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"]
+      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
+      contact: "+91 0000000000"
   },
   Carpenter2: {
       address: "Model Town, Khanna - 141401",
-      services: ["Furniture Making", "Table", "bed", "Chair"]
+      services: ["Furniture Making", "Table", "Bed", "Chair"],
+      contact: "+91 0000000000"
   },
   Pest1: {
       address: "Khanna HO- 141401",
-      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"]
+      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"],
+      contact: "+91 0000000000"
   },
   Pest2: {
       address: "Baddi Sitalpur, Khanna - 141401",
-      services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"]
+      services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"],
+      contact: "+91 0000000000"
   },
   Tution1: {
-      address: "Staion Road, Khanna - 141401",
-      services: ["Basics", "Core Subjects","Mock Exams", "Homework Assistance"]
+      address: "Station Road, Khanna - 141401",
+      services: ["Basics", "Core Subjects" , "Mock Exams", "Homework Assistance"],
+      contact: "+91 0000000000"
   },
   Tution2: {
       address: "Jamalpur, Khanna - 141401",
-      services: ["Core Subjects","Study Skills Development", "Basics"]
+      services: ["Core Subjects", "Study Skills Development", "Basics"],
+      contact: "+91 0000000000"
   },
   Family1: {
       address: "Nyi Abadi, Khanna - 141401",
-      services: ["Routine Check-Ups", "Acute Illness Treatment", "Therapy", "Immunizations"]
+      services: ["Routine Check-Ups", "Acute Illness Treatment", "Therapy", "Immunizations"],
+      contact: "+91 0000000000"
   },
   Family2: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Routine Check-Ups", "Immunizations", "Acute Illness Treatment", "Therapy"]
+      services: ["Routine Check-Ups", "Immunizations", "Acute Illness Treatment", "Therapy"],
+      contact: "+91 0000000000"
   },
   dj1: {
-      address: "Bhatttian, Khanna - 141401",
-      services: ["smoke machines"]
+      address: "Bhatia, Khanna - 141401",
+      services: ["smoke machines"],
+      contact: "+91 0000000000"
   },
   dj2: {
       address: "Anant Nagar, Khanna - 141401",
-      services: ["DJ","Trolly"]
+      services: ["DJ", "Trolly"],
+      contact: "+91 0000000000"
   },
   Photographer1: {
       address: "Krishna Nagar, Khanna - 141401",
-      services: ["Weddings", "Fashion Lookbooks","Corporate Events", "Underwater Photography", "Parties ", "Family Portraits"]
+      services: ["Weddings", "Fashion Lookbooks", "Corporate Events", "Underwater Photography", "Parties ", "Family Portraits"],
+      contact: "+91 0000000000"
   },
   Photographer2: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Parties ", "Weddings", "Family Portraits", "Corporate Events", "Magazine Shoots"]
+      services: ["Parties ", "Weddings", "Family Portraits", "Corporate Events", "Magazine Shoots"],
+      contact: "+91 0000000000"
   },
   Catering1: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Buffet Service", "Plated Service", "Arranging tables, chairs"]
+      services: ["Buffet Service", "Plated Service", "Arranging tables, chairs"],
+      contact: "+91 0000000000"
   },
   Catering2: {
       address: "Bhandari park Khanna - 141401",
-      services: ["Plated Service", "Equipment Rental", "Buffet Service"]
+      services: ["Plated Service", "Equipment Rental", "Buffet Service"],
+      contact: "+91 0000000000"
   },
   Decorator1: {
       address: "Meena Bazar, Khanna - 141401",
-      services: ["Lighting Design", "Stage", "Welcome Gate"]
+      services: ["Lighting Design", "Stage", "Welcome Gate"],
+      contact: "+91 0000000000"
   },
   Decorator2: {
       address: "Ahluwalia Mohalla, Khanna - 141401",
-      services: ["Venue Decoration", "Stage", "Lighting Design"]
+      services: ["Venue Decoration", "Stage", "Lighting Design"],
+      contact: "+91 0000000000"
   },
   Tent1: {
       address: "Libra, Khanna - 141401",
-      services: ["DJ", "Sound","chair & Tables" ,"Lights", "Trolly"]
+      services: ["DJ", "Sound", "chair & Tables" ,"Lights", "Trolly"],
+      contact: "+91 0000000000"
   },
   Tent2: {
       address: "Doraha, Khanna - 141401",
-      services: ["Sound", "Light", "Stage", "Seating Arrangements"]
+      services: ["Sound", "Light", "Stage", "Seating Arrangements"],
+      contact: "+91 0000000000"
   },
   Chef1: {
       address: "Rangia, Khanna - 141401",
-      services: ["Food Consulting", "Restaurant Consulting", "Cooking Services"]
+      services: ["Food Consulting", "Restaurant Consulting", "Cooking Services"],
+      contact: "+91 0000000000"
   },
   Chef2: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Cooking Services", "Food Consulting"]
+      services: ["Cooking Services", "Food Consulting"],
+      contact: "+91 0000000000"
   },
   Jaimala1: {
       address: "Dehlon, Khanna - 141401",
-      services: ["Stage", "Decoration", "Flowers", "Lightning"]
+      services: ["Stage", "Decoration", "Flowers", "Lightning"],
+      contact: "+91 0000000000"
   },
   Jaimala2: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Decoration", "Flowers", "Lightning"]
+      services: ["Decoration", "Flowers", "Lightning"],
+      contact: "+91 0000000000"
   },
   Bride1: {
       address: "GT Road, Khanna - 141401",
-      services: ["Makeup Services", "Hair Styling", "Nail Services", "Skincare Treatments", "Beard Grooming"]
+      services: ["Makeup Services", "Hair Styling", "Nail Services", "Skincare Treatments", "Beard Grooming"],
+      contact: "+91 0000000000"
   },
   Bride2: {
       address: "Samrala Road, Khanna - 141401",
-      services: ["Hair Styling", "Nail Services", "Makeup Services", "Shaving and Beard Grooming", "Facials"]
+      services: ["Hair Styling", "Nail Services", "Makeup Services", "Shaving and Beard Grooming", "Facials"],
+      contact: "+91 0000000000"
   },
   Vehicles1: {
-      address: "Pratap Calony, Khanna - 141401",
-      services: ["Cars", "Bus", "Taxi", "Auto", "Truck "]
+      address: "Pratap Colony, Khanna - 141401",
+      services: ["Cars", "Bus", "Taxi", "Auto", "Truck "],
+      contact: "+91 0000000000"
   },
   Vehicles2: {
       address: "Amloh Road, Khanna - 141401",
-      services: ["Bus", "Cars", "Tractor", "Taxi", "Auto", "Truck "]
+      services: ["Bus", "Cars", "Tractor", "Taxi", "Auto", "Truck "],
+      contact: "+91 0000000000"
   },
   Bike1: {
       address: "Libra, Khanna - 141401",
-      services: ["Apache", "Splender", "Scooty", "Yamaha", "cars", "Truck "]
+      services: ["Apache", "Splender", "Scooty", "Yamaha", "cars", "Truck "],
+      contact: "+91 0000000000"
   },
   Bike2: {
       address: "Nyi Abadi, Khanna - 141401",
-      services: ["Pulser", "Apache", "Scooty", "Auto"]
+      services: ["Pulser", "Apache", "Scooty", "Auto"],
+      contact: "+91 0000000000"
   },
   Toto1: {
       address: "Nyi Abadi, Khanna - 141401",
-      services: []
+      services: [],
+      contact: "+91 0000000000"
   },
   Toto2: {
       address: "Amloh Road, Khanna - 141401",
-      services: []
+      services: [],
+      contact: "+91 0000000000"
   },
 
 
@@ -393,6 +429,27 @@ function showButtons(card) {
       services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
       contact: "+91 08460298602"
   }, 
+  Cleaner51: {
+      address: "Samaspur, Samas Pur Road, Gurgaon Sector 51, Gurgaon - 122003 (Mohipal Shop, Near Mata Mandir)",
+      services: ["Car", "Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
+      contact: "+91 08401276762"
+  },
+  Cleaner52: {
+      address: "D - 148, Sadarpur Colony, Noida Sector 45, Noida - 201303",
+      services: ["Home Cleaning", "Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"],
+      contact: "+91 08105071825"
+  }, 
+  Cleaner53: {
+      address: "Golf Course Road 7th Tree, Dwark Sec 14, Dwarka Sector 14, Delhi - 110078 (DDA PARK)",
+      services: ["Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
+      contact: "+91 08460491754"
+  },
+  Gardener51: {
+      address: "P-22/A-6, P-Pocket, Dilshad Garden, Delhi - 110095 (Opposite to DDA Market)",
+      services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"],
+      contact: "+91 07947128717"
+  }, 
+
 
 
    
