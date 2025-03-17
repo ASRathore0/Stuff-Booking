@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Join BookingYard & Earn Cashback!" />
+    <meta property="og:description" content="Sign up using my referral code: E1D8756F and win up to ₹50 cashback!" />
+    <meta property="og:image" content="https://yourwebsite.com/referral-image.jpg" />
+    <meta property="og:url" content="https://bookingyard.in/referral" />
+    <meta property="og:type" content="website" />
+
     <title>Refer & Earn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -119,6 +125,8 @@
             margin: 10px 0; 
             color: #333;
         }
+
+        
     </style>
 </head>
 <body>
@@ -137,24 +145,68 @@
         <div class="referral-code">
             <div>
                 <p>Share your referral code: </p>
-                <span>E1D8756F</span>
+                <span id="referralCode">E1D8756F</span>
             </div>
-            <i class="fa fa-share" aria-hidden="true"></i>           
+            <button onclick="copyReferralCode()">
+                <i class="fa fa-copy"></i>
+            </button>
         </div>
+        
         
         <div class="terms">
             <h3>What is the Refer & Earn program on BookingYard.in?</h3>
             <p>It's a referral program where you earn rewards for inviting your family and friends to expand their business by connecting with customers looking for top-quality services.</p>
             <h3>What is the Reward for You?</h3>
             <p><strong>New-to-BookingYard.in</strong></p>
-            <p>₹50 cashback when your friend creates their account successfully.</p>
-            <p>The Refer and Earn program only applies to vendor registrations, not customer registrations.</p>
-            <p><strong>Note: </strong>You will not be eligible for cashback if:</p>  
-            <p>a.) The referred user has already been referred by someone else before.</p>
-            <p>b.) You or the referred user use fake or duplicate accounts to complete the transaction.</p>
-            <p>c.) The payment is not completed or is later disputed or refunded.</p>
-            <p>d.) You refer yourself using different accounts, devices, or email addresses.</p>
+            <p>₹50 cashback when your friend create their account successfully.</p>
+            <p><strong>Note: </strong>You will not be eligible for cashback if:</p>
+            <p>a. The referred user has already been referred by someone else before.</p>
+            <p>b. You or the referred user use fake or duplicate accounts to complete the transaction.</p>
+            <p>c. The payment is not completed or is later disputed or refunded.</p>
+            <p>d. You refer yourself using different accounts, devices, or email addresses.</p>
         </div>
     </div>
+
+    <script>
+    function copyReferralCode() {
+    const code = document.getElementById("referralCode").textContent;
+    navigator.clipboard.writeText(code);
+    alert("Referral Code Copied: " + code); 
+    }
+    
+    document.querySelector(".invite-btn").addEventListener("click", function() {
+    const referralCode = "E1D8756F"; // Your referral code
+    const shareData = {
+        title: "Join BookingYard & Earn Cashback!",
+        text: `Become a vender with BookingYard.in using my referral code: ${referralCode} and win up to ₹50 cashback!`,
+        url: "https://bookingyard.in/assets/vender.html",
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData).catch(console.error);
+    } else {
+        alert("Sharing not supported on this device.");
+    }
+    });
+
+    // WhatsApp Share
+    document.querySelector(".whatsapp").addEventListener("click", function() {
+        const referralCode = "E1D8756F";
+        const message = `Join BookingYard & Earn Cashback! Sign up using my referral code: ${referralCode} and win up to ₹50 cashback! \nhttps://bookingyard.in/assets/vender.html`;
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank");
+    });
+
+    // SMS Share
+    document.querySelector(".sms").addEventListener("click", function() {
+        const referralCode = "E1D8756F";
+        const message = `Join BookingYard & Earn Cashback! Sign up using my referral code: ${referralCode} and win up to ₹50 cashback! \nhttps://bookingyard.in/assets/vender.html`;
+        const smsUrl = `sms:?&body=${encodeURIComponent(message)}`;
+        window.open(smsUrl, "_blank");
+    });
+    
+
+    </script>
+      
 </body>
 </html>
