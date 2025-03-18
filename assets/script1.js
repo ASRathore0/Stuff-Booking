@@ -449,12 +449,63 @@ function showButtons(card) {
       services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"],
       contact: "+91 07947128717"
   }, 
+  Painter51: {
+      address: "A 194, Hari Enclave, Rohini, Delhi - 110085 (Near Choti Maszid)",
+      services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting", "Machinery Painting"],
+      contact: "+91 08460302138"
+  },
+  Painter52: {
+      address: "F - 71, Vishwakarma Colony, Delhi - 110044 (Near By Sabki Rasoi)",
+      services: ["Wall Painting", "Furniture Painting", "Putty Work", "House Painting", "Wall Crack Filling "],
+      contact: "+91 08511426798"
+  },
+  Painter53: {
+      address: "Block C, House No.- 135, Sudma Puri, Noida Extension, Noida - 201305 (Near Gaur City)",
+      services: ["Putty Work", "Wall Painting", "Furniture Painting", "House Painting", "Wall Crack Filling "],
+      contact: "+91 08460235285"
+  }, 
+  Carpenter51: {
+      address: "New Lahore Colony, New Lahore Colony-Shastri Nagar, Delhi - 110031 (Near Neelkanth Mandir)",
+      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
+      contact: "+91 09980400395"
+  },
+  Carpenter52: {
+      address: "Shiva Market, Pitampura, Delhi - 110034 (Shiva Market)",
+      services: ["Furniture Making", "Table", "Bed", "Chair"],
+      contact: "+91 07947159146"
+  },
+  Carpenter53: {
+      address: "RU BLOCK, Pitampura, Pitampura Ru Block, Delhi - 110034 (Power House)",
+      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
+      contact: "+91 08511415741"
+  },
+  Carpenter54: {
+      address: "N-87 A, Jamia Nagar, Delhi - 110025",
+      services: ["Furniture Making", "Table", "Bed", "Chair"],
+      contact: "+91 08401581753"
+  }, 
+  Pest51: {
+      address: "Mayank Pest Control, Street No- 34, Uttam Nagar, Delhi - 110059 (Uttam Nagar East Metro Station)",
+      services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"],
+      contact: "+91 08123506019"
+  },
+  Pest52: {
+      address: "Office No WZ-202, Dwarka Mod, Dwarka More, Delhi - 110059 (Near Bhagwati Garden Extension)",
+      services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"],
+      contact: "+91 09725511520"
+  }, 
+
 
 
 
    
    
 // Siwan location
+// Siwan location
+
+
+
+   
    
   Plumber501: {
       address: "Siwan HO, Siwan - 841226",
