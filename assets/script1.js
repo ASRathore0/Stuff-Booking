@@ -397,102 +397,102 @@ function showButtons(card) {
   Plumber52: {
       address: "Ram Kishor Plumbing Contractor, Shiv Mandir Vali Gali, Tugalpur, Greater Noida - 201310 (Behind Ansal Plaza)",
       services: ["Tap", "sink", "Tank", "Pipe"],
-      contact: "+917411848722"
+      contact: "+91 7411848722"
   }, 
   Plumber53: {
       address: "Hno 1778, Sector 16, Faridabad Sector 16, Faridabad - 121002 (Near Pawan Dairy)",
       services: ["Drain cleaning", "Tap", "sink"],
-      contact: "9036209680"
+      contact: "+91 9036209680"
   }, 
   Electrician51: {
       address: "Gaurav Electrician, Dlf Phase 1, Gurgaon Sector 18, Gurgaon - 122015 (Gurugram Sector 18)",
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 07487988790"
+      contact: "+91 7487988790"
   },
   Electrician52: {
       address: "Dayal Public School, Gurgaon Sector 28, Gurgaon - 122002 (Near Dayal Public School)",
       services: ["Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 09724979586"
+      contact: "+91 9724979586"
   },
   Electrician53: {
       address: "Office No-71, Pkt-2, Rohini Sector 24, Delhi - 110085 (Near DPS)",
       services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 07947434809"
+      contact: "+91 7947434809"
   },
   Electrician54: {
       address: "113, Model Basti, Karol Bagh, Delhi - 110005 (Near Filmistan Cinema)",
       services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 08867845671"
+      contact: "+91 8867845671"
   },
   Electrician55: {
       address: "Building No.- B 415, Ghaziabad, Ghaziabad Maliwara, Ghaziabad - 201001 (Near Maliwara Chowk)",
       services: ["Fan Installation", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 08460298602"
+      contact: "+91 8460298602"
   }, 
   Cleaner51: {
       address: "Samaspur, Samas Pur Road, Gurgaon Sector 51, Gurgaon - 122003 (Mohipal Shop, Near Mata Mandir)",
       services: ["Car", "Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
-      contact: "+91 08401276762"
+      contact: "+91 8401276762"
   },
   Cleaner52: {
       address: "D - 148, Sadarpur Colony, Noida Sector 45, Noida - 201303",
       services: ["Home Cleaning", "Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"],
-      contact: "+91 08105071825"
+      contact: "+91 8105071825"
   }, 
   Cleaner53: {
       address: "Golf Course Road 7th Tree, Dwark Sec 14, Dwarka Sector 14, Delhi - 110078 (DDA PARK)",
       services: ["Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
-      contact: "+91 08460491754"
+      contact: "+91 8460491754"
   },
   Gardener51: {
       address: "P-22/A-6, P-Pocket, Dilshad Garden, Delhi - 110095 (Opposite to DDA Market)",
       services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"],
-      contact: "+91 07947128717"
+      contact: "+91 7947128717"
   }, 
   Painter51: {
       address: "A 194, Hari Enclave, Rohini, Delhi - 110085 (Near Choti Maszid)",
       services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting", "Machinery Painting"],
-      contact: "+91 08460302138"
+      contact: "+91 8460302138"
   },
   Painter52: {
       address: "F - 71, Vishwakarma Colony, Delhi - 110044 (Near By Sabki Rasoi)",
       services: ["Wall Painting", "Furniture Painting", "Putty Work", "House Painting", "Wall Crack Filling "],
-      contact: "+91 08511426798"
+      contact: "+91 8511426798"
   },
   Painter53: {
       address: "Block C, House No.- 135, Sudma Puri, Noida Extension, Noida - 201305 (Near Gaur City)",
       services: ["Putty Work", "Wall Painting", "Furniture Painting", "House Painting", "Wall Crack Filling "],
-      contact: "+91 08460235285"
+      contact: "+91 8460235285"
   }, 
   Carpenter51: {
       address: "New Lahore Colony, New Lahore Colony-Shastri Nagar, Delhi - 110031 (Near Neelkanth Mandir)",
       services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
-      contact: "+91 09980400395"
+      contact: "+91 9980400395"
   },
   Carpenter52: {
       address: "Shiva Market, Pitampura, Delhi - 110034 (Shiva Market)",
       services: ["Furniture Making", "Table", "Bed", "Chair"],
-      contact: "+91 07947159146"
+      contact: "+91 7947159146"
   },
   Carpenter53: {
       address: "RU BLOCK, Pitampura, Pitampura Ru Block, Delhi - 110034 (Power House)",
       services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
-      contact: "+91 08511415741"
+      contact: "+91 8511415741"
   },
   Carpenter54: {
       address: "N-87 A, Jamia Nagar, Delhi - 110025",
       services: ["Furniture Making", "Table", "Bed", "Chair"],
-      contact: "+91 08401581753"
+      contact: "+91 8401581753"
   }, 
   Pest51: {
       address: "Mayank Pest Control, Street No- 34, Uttam Nagar, Delhi - 110059 (Uttam Nagar East Metro Station)",
       services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"],
-      contact: "+91 08123506019"
+      contact: "+91 8123506019"
   },
   Pest52: {
       address: "Office No WZ-202, Dwarka Mod, Dwarka More, Delhi - 110059 (Near Bhagwati Garden Extension)",
       services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"],
-      contact: "+91 09725511520"
+      contact: "+91 9725511520"
   }, 
 
 
