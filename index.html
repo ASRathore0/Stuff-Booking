@@ -1756,5 +1756,14 @@
 <script src="/assets/script.js"></script>
 <script src="/assets/script1.js"></script>
 
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth > 768) { 
+          // Redirect desktop users to desktop.html
+          window.location.href = "/assets/desktop.html";
+      }
+     });
+</script>
+
 </body>
 </html>
