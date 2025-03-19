@@ -420,7 +420,15 @@ body {
         });
     });
     });
-  
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth <= 768) { 
+            // Redirect mobile users to index.html
+            window.location.href = "index.html";
+        }
+    });
+        
     </script>
 
 </body>
