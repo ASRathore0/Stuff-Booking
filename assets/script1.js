@@ -343,12 +343,12 @@ function showButtons(card) {
       services: ["Decoration", "Flowers", "Lightning"],
       contact: "+91 0000000000"
   },
-  Bride1: {
+  Beauty1: {
       address: "GT Road, Khanna - 141401",
       services: ["Makeup Services", "Hair Styling", "Nail Services", "Skincare Treatments", "Beard Grooming"],
       contact: "+91 0000000000"
   },
-  Bride2: {
+  Beauty2: {
       address: "Samrala Road, Khanna - 141401",
       services: ["Hair Styling", "Nail Services", "Makeup Services", "Shaving and Beard Grooming", "Facials"],
       contact: "+91 0000000000"
@@ -388,7 +388,10 @@ function showButtons(card) {
 
    
 // Delhi location
+// Delhi location
+
    
+  // Home Services 
   Plumber51: {
       address: "E 37 Khirki Extension, Malviya Nagar, Delhi - 110017 (Near Select City Mall), Delhi NCR",
       services: ["Tap", "sink", "Tank"],
@@ -440,7 +443,7 @@ function showButtons(card) {
       contact: "+91 8105071825"
   }, 
   Cleaner53: {
-      address: "Golf Course Road 7th Tree, Dwark Sec 14, Dwarka Sector 14, Delhi - 110078 (DDA PARK)",
+      address: "Golf Course Road 7th Tree, Dwarka Sec 14, Dwarka Sector 14, Delhi - 110078 (DDA PARK)",
       services: ["Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
       contact: "+91 8460491754"
   },
@@ -493,6 +496,229 @@ function showButtons(card) {
       address: "Office No WZ-202, Dwarka Mod, Dwarka More, Delhi - 110059 (Near Bhagwati Garden Extension)",
       services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"],
       contact: "+91 9725511520"
+  }, 
+// Event Services
+  dj51: {
+      address: "House No 2059, Laxman Vihar, Laxman Vihar Industrial Area, Gurgaon - 122001 (Doultabad Flyover)",
+      services: ["Smoke Machines", "Box"],
+      contact: "+91 8128882509"
+  },
+  dj52: {
+      address: "RZ-181, Gali No. 5, Vaishali Colony, Dabri Road, Dwarka, Delhi - 110075",
+      services: ["DJ", "Trolly"],
+      contact: "+91 8105778829"
+  },
+  dj53: {
+      address: "H-2815/59, Gali Number-5, Gurudawara Gali, Gandhi Nagar, Delhi - 110031 (Kalish Nagar)",
+      services: ["DJ", "Trolly", "Generator"],
+      contact: "+91 7041487503"
+  },
+  dj54: {
+    address: "Shop No. 47, West Punjabi Bagh, West Punjabi Bagh, Delhi - 110026",
+    services: ["DJ", "Live Music", "Live Performance"],
+    contact: "+91 8147422177"
+  },
+  dj55: {
+      address: "House No 2059, Laxman Vihar, Laxman Vihar Industrial Area, Gurgaon - 122001 (Doultabad Flyover)",
+      services: ["Parties", "Get-togethers", "Corporate events"],
+      contact: "+91 8123483114"
+  },
+  dj56: {
+    address: "A/163 LIG Flats, Rajouri Garden, Delhi - 110027 (Near Bharat Sweets)",
+    services: ["Jagran", "Bhajan", "Bhajan Sandhya"],
+    contact: "+91 8460439281"
+  },
+  dj57: {
+    address: "Malhotra Sounds & DJ Services, Vivekanand Puri, Sarai Rohilla, Delhi - 110035",
+    services: ["Smoke machines", "Box", "DJ", "Live Music"],
+    contact: "+91 7795696020"
+  },
+  dj58: {
+    address: "Building No.114, 3rd Floor, Mathura Road, Hari Nagar Ashram, Delhi - 110014 (Near Ashram Chowk)",
+    services: ["Cultural events", "Corporate Events", "Wedding Special"],
+    contact: "+91 8485915971"
+  },
+  
+ Photographer51: {
+      address: "4 X 504, Greater Noida, Greater Noida - 201310 (Opposite Yathaarth Hospital, Awho Gurjinder Vihar)",
+      services: ["Weddings Shoot", "Fashion Lookbooks", "Newborn Shoot"],
+      contact: "+91 8105878732"
+  },
+  Photographer52: {
+      address: "Amloh Road, Khanna - 141401",
+      services: ["Parties ", "Weddings", "Family Portraits", "Corporate Events", "Magazine Shoots"],
+      contact: "+91 0000000000"
+  },
+  Photographer53: {
+    address: "ZS Modeling Agency and Fashion Studio, Ashok Vihar, Delhi - 110052",
+    services: ["Parties ", "Weddings", "Family Portraits", "Reels Shoots"],
+    contact: "+91 8197335675"
+  },
+  Photographer54: {
+    address: "A Block, Noida Sector 104, Noida - 201304 (Near By Starling Mall)",
+    services: ["Pre Wedding Shoot", "Candid Photography", "Photography"],
+    contact: "+91 9740026491"
+  },
+  Photographer55: {
+    address: "Building No 53, Darya Ganj, Delhi - 110002",
+    services: ["Wedding", "Birthday Parties", "School Events", "Sports Events"],
+    contact: "+91 8105325049"
+  },
+  Photographer56: {
+    address: "Building No 53, Darya Ganj, Delhi - 110002",
+    services: ["Candid Photography", "Birthday Photography", "Wedding Photography"],
+    contact: "+91 7625041902"
+  },
+  Photographer57: {
+    address: "Building No WZ-3943, Rani Bagh, Delhi - 110034 (Near Ram Mandir)",
+    services: ["Reels Shoots", "Professional Photography", "Wedding Photography"],
+    contact: "+91 0000000000"
+  },
+  Catering51: {
+      address: "Shop Number 15, Chokkhandi, Gurudwara Singh Sabha Market, Tilak Nagar, Delhi - 110018 (Near Haldiram Sweets)",
+      services: ["Buffet Service", "Plated Service", "Arranging tables, chairs"],
+      contact: "+91 8460517056"
+  },
+  Catering52: {
+      address: "Shop No-3, Cherry County, Noida Extension, Noida - 201305 (Near Ek Murti Gol Chakkar)",
+      services: ["Plated Service", "Equipment Rental", "Buffet Service"],
+      contact: "+91 8123244917"
+  },
+  Catering53: {
+    address: "Sethi Arcade, Sethi Max Royal, Noida Sector 76, Noida - 201304",
+    services: ["Plated Service", "Buffet Service", "Fast Food", "Street Food"],
+    contact: "+91 8511888167"
+  },
+  Catering54: {
+    address: "Shop No. 157, Main Road, Tibbia College, Karol Bagh, Delhi - 110005 (Opposite Ajmal Khan Park, Netaji Subhash Market)",
+    services: ["Plated Service", "Chinese", "Fast Food", "Street Food"],
+    contact: "+91 7048898537"
+  },
+  Catering55: {
+    address: "8628/c8, Vasant Kunj, Delhi - 110070 (Near By Bses Office)",
+    services: ["Plated Service", "Bengali Food", "SouthIndian Food"],
+    contact: "+91 8147987753"
+  },
+  Catering56: {
+    address: "Shop No-20, Dda Gole Market, Rohini Sector 9, Delhi - 110085 (Near Varun Apartment)",
+    services: ["Plated Service", "Chinese", "Fast Food", "Street Food"],
+    contact: "+91 9980678797"
+  },
+  Catering57: {
+    address: "134, Yamaha Vihar Sec 49, Noida Sector 49, Noida Sector 49, Noida - 201303 (Opp Radha Swami Satsang)",
+    services: ["Plated Service", "Pure Veg", "Snacks", "Sweets"],
+    contact: "+91 8904926215"
+  },
+  Decorator51: {
+      address: "Birthday Favours Serves Delhi NCR, Dwarka, Delhi - 110075",
+      services: ["Birthday Special", "Lighting Design", "Stage", "Welcome Gate"],
+      contact: "+91 8105978925"
+  },
+  Decorator52: {
+      address: "Shop No. 1, Innerline Road, Lodhi Road, Delhi - 110003 (Sai Baba Mandir)",
+      services: ["Venue Decoration", "Stage", "Lighting Design"],
+      contact: "+91 0000000000"
+  },
+  Decorator53: {
+    address: "Office No G F 2 B-11, RDC Raj Nagar, Rdc-raj Nagar Ghaziabad, Ghaziabad - 201002 (Near Kuthcery Road)",
+    services: ["Venue Decoration", "Stage", "Lighting Design", "Wedding Special"],
+    contact: "+91 8401395315"
+  },
+  Decorator54: {
+    address: "Building No-F-141, Khanpur Village, Khanpur, Delhi - 110062 (Near Puspa Bhawan)",
+    services: ["Wedding", "Office Party", "Lighting Design", "Naming Ceremony"],
+    contact: "+91 9606404752"
+  },
+  Decorator55: {
+    address: "Shop No: 24, Mini Central Market, Dda Flats-kalkaji, Delhi - 110019 (Near Sai Mandir)",
+    services: ["Wedding Ceremony", "Lighting Design", "Naming Ceremony"],
+    contact: "+91 8123090321"
+  },
+  Tent51: {
+      address: "1361/40, DDA Flat, Saket, Delhi - 110017 (Opposite Sector 3 Pushp Vihar)",
+      services: ["DJ", "Sound", "chair & Tables" , "Lights", "Trolly"],
+      contact: "+91 7383406639"
+  },
+  Tent52: {
+      address: "Shop No-D-1, Main Road, Chattarpur, Delhi - 110074",
+      services: ["Sound", "Light", "Stage", "Seating Arrangements"],
+      contact: "+91 8123889513"
+  },
+  Tent53: {
+    address: "S R Complex, Naya Bans, Sec-15, Noida, Main Market., Noida Sector 15, Noida - 201301 (Near -Justdial Office.)",
+    services: ["Sound", "Stage", "Seating Arrangements", "Lighting"],
+    contact: "+91 0000000000"
+  },
+  Tent54: {
+  address: "Shop Number 15, Chokkhandi, Gurudwara Singh Sabha Market, Tilak Nagar, Delhi - 110018 (Near Haldiram Sweets)",
+  services: ["Sound", "Light", "Stage", "Seating Arrangements"],
+  contact: "+91 8460517056"
+  },
+  Tent55: {
+    address: "Sector 7 Metro Road, Rohini Sector 7, Delhi - 110085 (Near Metro Pillar 401)",
+    services: ["Event Management", "Catering Service", "Flower Decorations", "Sound", "Light", "Stage", "Seating Arrangements", "Multi Lightening"],
+    contact: "+91 9725270956"
+  },
+  Chef51: {
+      address: "Shop Number- G- 1, Pankaj Galaxy1, Main Road., Dwarka Sector 12, Delhi - 110078 (Opposite Allahabad Bank)",
+      services: ["Food Consulting", "Restaurant Consulting", "Cooking Services"],
+      contact: "+91 0000000000"
+  },
+  Chef52: {
+      address: "Shop- 64, Rajouri Garden, Delhi - 110027 (Dda market)1",
+      services: ["Cooking Services", "Food Consulting"],
+      contact: "+91 0000000000"
+  },
+  Chef53: {
+    address: "H 801/1/1, Sukdev Nagar Mrkt Kotla Mubrakpur, Kotla Mubarakpur, Delhi - 110003",
+    services: ["Cooking Services", "Fast Food", "Food Consulting"],
+    contact: "+91 0000000000"
+  },
+  Chef54: {
+    address: "Shop Number B 3, Main Road, New Ashok Nagar, Delhi - 110096 (Near Aggarwal Sweets, Near Sarpanch Chowk, B Block)",
+    services: ["Cooking Services", "Fast Food", "Food Consulting", "Veg Special"],
+    contact: "+91 0000000000"
+  },
+  Jaimala51: {
+      address: "Shop No.A-183, Yamuna Vihar, ADARSH MARKET, Yamuna Vihar, Delhi - 110053 (Delhi Jal Board)",
+      services: ["Stage", "Decoration", "Flowers", "Lightning"],
+      contact: "+91 8147850531"
+  },
+  Jaimala52: {
+      address: "I-866-67, Jahangir Puri, Delhi - 110033",
+      services: ["Decoration", "Flowers", "Lightning"],
+      contact: "+91 0000000000"
+  },
+  Jaimala53: {
+    address: "Ladpura, Greater Noida, Greater Noida, Greater Noida - 201310 (Oxford Green Public School)",
+    services: ["Decoration", "Flowers", "Lightning", "Lotus Decoration"],
+    contact: "+91 0000000000"
+  },
+  Jaimala54: {
+  address: "Ranhera, Noida - 203155 (Near Adarsh Inter College & Sarva UP Gramin Bank, Sharma Market)",
+  services: ["Decoration", "Flowers", "Lightning", "Lotus Decoration"],
+  contact: "+91 0000000000"
+  },
+// Working Professionals   
+  Beauty51: {
+      address: "H3/69 Sector-11, Rohini, Delhi - 110085 (Opposite BPIT College)",
+      services: ["Makeup Services", "Hair Styling", "Nail Services", "Skincare Treatments", "Beard Grooming"],
+      contact: "+91 8460504704"
+  },
+  Beauty52: {
+      address: "G-18/7a, 1st Floor, Rajouri Garden, Delhi - 110027 (Near Gupta Namkeen & Gambhir Hospital)",
+      services: ["Hair Styling", "Nail Services", "Makeup Services"],
+      contact: "+91 8105620517"
+  },
+  Beauty53: {
+    address: "Building No 275, Rajdhaani Enclave, Pitampura, Delhi - 110034 (Near Yes Bank)",
+    services: ["Hair Styling", "Nail Services", "Makeup Services"],
+    contact: "+91 8147932011"
+  },
+  Beauty54: {
+  address: "No. 45, N.W.A, Club Road, Punjabi Bagh Extension, Delhi - 110026",
+  services: ["Hair Styling", "Nail Services", "Makeup Services"],
+  contact: "+91 8105578508"
   }, 
 
 
