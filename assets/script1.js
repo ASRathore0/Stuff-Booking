@@ -650,9 +650,9 @@ function showButtons(card) {
     contact: "+91 0000000000"
   },
   Tent54: {
-  address: "Shop Number 15, Chokkhandi, Gurudwara Singh Sabha Market, Tilak Nagar, Delhi - 110018 (Near Haldiram Sweets)",
-  services: ["Sound", "Light", "Stage", "Seating Arrangements"],
-  contact: "+91 8460517056"
+    address: "Shop Number 15, Chokkhandi, Gurudwara Singh Sabha Market, Tilak Nagar, Delhi - 110018 (Near Haldiram Sweets)",
+    services: ["Sound", "Light", "Stage", "Seating Arrangements"],
+    contact: "+91 8460517056"
   },
   Tent55: {
     address: "Sector 7 Metro Road, Rohini Sector 7, Delhi - 110085 (Near Metro Pillar 401)",
@@ -695,9 +695,9 @@ function showButtons(card) {
     contact: "+91 0000000000"
   },
   Jaimala54: {
-  address: "Ranhera, Noida - 203155 (Near Adarsh Inter College & Sarva UP Gramin Bank, Sharma Market)",
-  services: ["Decoration", "Flowers", "Lightning", "Lotus Decoration"],
-  contact: "+91 0000000000"
+    address: "Ranhera, Noida - 203155 (Near Adarsh Inter College & Sarva UP Gramin Bank, Sharma Market)",
+    services: ["Decoration", "Flowers", "Lightning", "Lotus Decoration"],
+    contact: "+91 0000000000"
   },
 // Working Professionals   
   Beauty51: {
@@ -716,9 +716,9 @@ function showButtons(card) {
     contact: "+91 8147932011"
   },
   Beauty54: {
-  address: "No. 45, N.W.A, Club Road, Punjabi Bagh Extension, Delhi - 110026",
-  services: ["Hair Styling", "Nail Services", "Makeup Services"],
-  contact: "+91 8105578508"
+    address: "No. 45, N.W.A, Club Road, Punjabi Bagh Extension, Delhi - 110026",
+    services: ["Hair Styling", "Nail Services", "Makeup Services"],
+    contact: "+91 8105578508"
   }, 
 
 
