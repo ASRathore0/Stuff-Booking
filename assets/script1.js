@@ -699,6 +699,31 @@ function showButtons(card) {
     services: ["Decoration", "Flowers", "Lightning", "Lotus Decoration"],
     contact: "+91 0000000000"
   },
+  Mineral51: {
+    address: "469 Dda Flat, New Ranjit Nagar, Delhi - 110008 (Near Satyam Pvr)",
+    services: ["water","Jaar"],
+    contact: "+91 7947106511"
+  },
+  Mineral52: {
+    address: "Baba Water Supply, Batra Cinema, Dr Mukherjee Nagar, Delhi - 110009 (Malhotra Parking)",
+    services: ["water", "Jaar"],
+    contact: "+91 8460253255"
+  }, 
+  Mineral53: {
+    address: "House No 522, D 16, 60 Ft Road, Chattarpur, Delhi - 110074 (Near Diwanbajaj)",
+    services: ["water", "Jaar"],
+    contact: "+91 7942698699"
+  },
+  Mineral54: {
+    address: "Rz -51, Dayal Singh Road, Uttam Nagar, Delhi - 110059 (Adarsh Model School)",
+    services: ["water", "Jaar"],
+    contact: "+91 7942685569"
+  },
+  Mineral55: {
+    address: "Plot Number-8B, Shalimar Bagh, Delhi - 110088 (Near By Hanuman Mandir, Sahipur Village)",
+    services: ["water", "Jaar"],
+    contact: "+91 7942696841"
+  }, 
 // Working Professionals   
   Beauty51: {
       address: "H3/69 Sector-11, Rohini, Delhi - 110085 (Opposite BPIT College)",
@@ -711,7 +736,7 @@ function showButtons(card) {
       contact: "+91 8105620517"
   },
   Beauty53: {
-    address: "Building No 275, Rajdhaani Enclave, Pitampura, Delhi - 110034 (Near Yes Bank)",
+    address: "Building No 275, Rajdhani Enclave, Pitampura, Delhi - 110034 (Near Yes Bank)",
     services: ["Hair Styling", "Nail Services", "Makeup Services"],
     contact: "+91 8147932011"
   },
