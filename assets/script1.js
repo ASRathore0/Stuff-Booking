@@ -263,16 +263,12 @@ function showButtons(card) {
       services: ["Core Subjects", "Study Skills Development", "Basics"],
       contact: "+91 0000000000"
   },
-  Family1: {
-      address: "Nyi Abadi, Khanna - 141401",
-      services: ["Routine Check-Ups", "Acute Illness Treatment", "Therapy", "Immunizations"],
-      contact: "+91 0000000000"
+  Mineral1: {
+      address: "Street No 4/1/2 Guru Arjun Dev Nagar, Near Cheema Chowk, Samrala Road, Ludhiana - 141008 (Near Gurdwara)",
+      services: ["Water", "Jarr"],
+      contact: "+91 7947433274"
   },
-  Family2: {
-      address: "Amloh Road, Khanna - 141401",
-      services: ["Routine Check-Ups", "Immunizations", "Acute Illness Treatment", "Therapy"],
-      contact: "+91 0000000000"
-  },
+
   dj1: {
       address: "Bhatia, Khanna - 141401",
       services: ["smoke machines"],
