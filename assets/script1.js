@@ -184,39 +184,34 @@ function showButtons(card) {
  // Example details for each card
  const cardDetails = {
   Plumber1: {
-      address: "Office Number 9 Second Floor, R K Complex, Grain Market, Nyi Abadi, Khanna - 141401 (Behind Arora Palace)",
-      services: ["Pipes", "Taps", "Valves", "Sink installation", "Water Heaters","drain cleaning"],
-      contact: "+91 9876543210"
+      address: "Nyi Abadi Jeet Rai Chakki, Gali No 20, House 20/24, Khanna HO, Khanna - 141401 (Gurdwara)",
+      services: ["Pipes", "Taps", "Valves", "Sink installation", "Water Heaters", "drain cleaning"],
+      contact: "+91 7947107441"
   },
   Plumber2: {
-      address: "Fatehgarh Sahib, Khanna - 141401",
+      address: "Khamanon, Bilaspur Road, Fatehgarh Sahib - 141801 (Near Fattak)",
       services: [ "Tap Repair", "Valve", "Pipes","Power socket", "Septic Tank", "Sink", "Pipes"],
-      contact: "+91 9988776655"
+      contact: "+91 7947420673"
   },
   Electrician1: {
-      address: "Plot No 21, Industrial Area Phase 1, Khanna - 141401",
+      address: "Krishna Nagar, Khanna - 141401",
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
-      contact: "+91 9988776655"
+      contact: "+91 7947103994"
   },
   Electrician2: {
-      address: "Gulmohar Nagar, Khanna - 141401",
+      address: "Chowk, Krishna Nagar, Gulmohar Nagar, Khanna - 141401 (Near Sai Market)",
       services: ["Refrigerator Repair ", "Air Conditioner (AC) Repair", "Washing Machine Repair", "Geyser & Water Heater Repair", " Microwave Oven Repair"],
-      contact: "+91 8809296250"
+      contact: "+91 7947126478"
   },
   Cleaner1: {
       address: "Nyi Abadi, Khanna - 141401",
       services: ["Curtain Cleaning", "Bathroom Cleaning", "Kitchen Cleaning", "Home Cleaning", "Sinks", "Office Cleaning"],
       contact: "+91 0000000000"
   },
-  Cleaner2: {
-      address: "Malerkotla road, Khanna - 141401",
-      services: ["Home Cleaning", "Mattress ", "Window & Glass Cleaning", "Hotel & Restaurant", "Bathroom Cleaning", "Kitchen Cleaning"],
-      contact: "+91 0000000000"
-  },
   Gardener1: {
-      address: "Ferozepur Road, Khanna - 141401",
+      address: "Amloh Road Market, Amloh Road, Khanna H O, Khanna - 141401 (Near Sai Baba Mandir)",
       services: ["Fall Cleanup", "Planting ", "Lawn Mowing & Maintenance", "Tree Pruning & Trimming", "Stump Grinding"],
-      contact: "+91 0000000000"
+      contact: "+91 7947147285"
   },
   Gardener2: {
       address: "Pakhowal Road, Khanna - 141401",
@@ -224,7 +219,7 @@ function showButtons(card) {
       contact: "+91 0000000000"
   },
   Painter1: {
-      address: "Samrala Chowk, Khanna - 141401",
+      address: "Singhabhenu Colony, 2 Number Gali, Krishna Nagar, Khattra, Galwaddi, Khanna - 141401",
       services: ["House Painting", "Wall Painting", "Furniture", "Epoxy Coating", "Spray Painting", "Machinery Painting"],
       contact: "+91 0000000000"
   },
@@ -234,28 +229,28 @@ function showButtons(card) {
       contact: "+91 0000000000"
   },
   Carpenter1: {
-      address: "Laheri Road, Khanna - 141401",
+      address: "Quality Wood Works, R-13, Lalheri Road-Khanna H O, Khanna - 141401 (Guru Teg Bahadur Nagar)",
       services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
-      contact: "+91 0000000000"
+      contact: "+91 7942696286"
   },
   Carpenter2: {
-      address: "Model Town, Khanna - 141401",
+      address: "Model Town, Nr C A Staff, Khanna Samrala Road, Khanna - 141401 (Near C A Staff,)",
       services: ["Furniture Making", "Table", "Bed", "Chair"],
-      contact: "+91 0000000000"
+      contact: "+91 8401604512"
   },
   Pest1: {
-      address: "Khanna HO- 141401",
+      address: "Khanna HO, Khanna - 141401 (Khanna City Centre)",
       services: ["Rodents", "Snakes", "Mosquitoes", "Cockroaches", "Flies", "Termites", "Bed Bugs"],
-      contact: "+91 0000000000"
+      contact: "+91 7947103023"
   },
   Pest2: {
-      address: "Baddi Sitalpur, Khanna - 141401",
+      address: "Vishkarma Market, Chhote, Malerkotla Road, Khanna H O, Khanna - 141401",
       services: ["Mosquitoes", "Cockroaches", "Flies", "Termites"],
-      contact: "+91 0000000000"
+      contact: "+91 7947105448"
   },
   Tution1: {
       address: "Station Road, Khanna - 141401",
-      services: ["Basics", "Core Subjects" , "Mock Exams", "Homework Assistance"],
+      services: ["Basics", "Core Subjects", "Mock Exams", "Homework Assistance"],
       contact: "+91 0000000000"
   },
   Tution2: {
@@ -270,24 +265,24 @@ function showButtons(card) {
   },
 
   dj1: {
-      address: "Bhatia, Khanna - 141401",
+      address: "Ward No 22, Bhattian Khanna, Bhattian, Khanna - 141401 (Nr Petrol Pump)",
       services: ["smoke machines"],
-      contact: "+91 0000000000"
+      contact: "+91 8045781574"
   },
   dj2: {
-      address: "Anant Nagar, Khanna - 141401",
+      address: "H. No. 28, Khanna, 29, Ucha Vehra, Anant Nagar, Ahluwalia Mohalla, Khanna - 141401 (Near Bekunth Dham Gurudwara)",
       services: ["DJ", "Trolly"],
-      contact: "+91 0000000000"
+      contact: "+91 7947411660"
   },
   Photographer1: {
-      address: "Krishna Nagar, Khanna - 141401",
+      address: "Krishna Nagar Chowk, Krishna Nagar, Khanna - 141401 (Near Sai Market)",
       services: ["Weddings", "Fashion Lookbooks", "Corporate Events", "Underwater Photography", "Parties ", "Family Portraits"],
-      contact: "+91 0000000000"
+      contact: "+91 9724362067"
   },
   Photographer2: {
-      address: "Amloh Road, Khanna - 141401",
+      address: "Amloh Road, Amloh Khanna Road, Khanna - 141401 (Near Jain Mandir)",
       services: ["Parties ", "Weddings", "Family Portraits", "Corporate Events", "Magazine Shoots"],
-      contact: "+91 0000000000"
+      contact: "+91 7942684255"
   },
   Catering1: {
       address: "Amloh Road, Khanna - 141401",
@@ -310,9 +305,9 @@ function showButtons(card) {
       contact: "+91 0000000000"
   },
   Tent1: {
-      address: "Libra, Khanna - 141401",
-      services: ["DJ", "Sound", "chair & Tables" ,"Lights", "Trolly"],
-      contact: "+91 0000000000"
+      address: "Malerkotla Road, Amloh Khanna Road, Khanna - 141401 (Near A S Modern School)",
+      services: ["DJ", "Sound", "chair & Tables" , "Lights", "Trolly"],
+      contact: "+91 9054635146"
   },
   Tent2: {
       address: "Doraha, Khanna - 141401",
@@ -774,6 +769,17 @@ function showButtons(card) {
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
       contact: "+91 07947129036"
   }, 
+
+
+   // Mirganj
+   // Mirganj
+
+
+   SUV601: {
+      address: "Bhairopatti (Badheya) Mirganj, Gopalganj ",
+      services: ["Tractor"],
+      contact: "+91 9523054093"
+  },
   
 };
 
