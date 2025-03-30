@@ -769,6 +769,11 @@ function showButtons(card) {
       services: ["Fan Installation & Repair", "Lighting Installation & Repair", "Wiring & Rewiring", "Power Socket & Switch Installation", "Water Heaters"],
       contact: "+91 07947129036"
   }, 
+   Toto501: {
+      address: "Siwan HO, Siwan - 841226",
+      services: ["Toto"],
+      contact: "+91 6287031497"
+  },
 
 
 
