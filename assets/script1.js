@@ -771,13 +771,43 @@ function showButtons(card) {
   }, 
 
 
+
+   // Maharajganj
+   // Maharajganj
+
+
+    Carpenter551: {
+      address: "Fatehpur village Maharajganj, Siwan ",
+      services: ["Furniture Making", "Wood Carving", "Table", "chair", "Bed"],
+      contact: "+91 9006688721"
+   },
+   Tent551: {
+    address: "Ramapali Chitragachhi, Maharajganj, Siwan 841238",
+    services: ["Sound", "Light", "Stage", "Seating Arrangements"],
+    contact: "+91 9955817356"
+  },
+    Other551: {
+      address: "Ramapali Chitragachhi, Maharajganj, Siwan 841238 ",
+      services: ["Bolero", "Tractor"],
+      contact: "+91 9525674195"
+  },
+   Jaimala551: {
+      address: "Ramapali Chitragachhi, Maharajganj, Siwan 841238",
+      services: ["Stage"],
+      contact: "+91 6202965319"
+  },
+   
+   
+   
+
+
    // Mirganj
    // Mirganj
 
 
-   SUV601: {
+   Scorpio601: {
       address: "Bhairopatti (Badheya) Mirganj, Gopalganj ",
-      services: ["Tractor"],
+      services: ["Scorpio", "Tractor"],
       contact: "+91 9523054093"
   },
   
