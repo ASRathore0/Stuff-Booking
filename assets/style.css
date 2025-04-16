@@ -2385,21 +2385,21 @@ color: #046c9f;
 /* City Popup */
 .city-popup {
   position: fixed;
-  top: 50%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f8f9fa;
   border: 2px solid #046c9f;
   border-radius: 15px;
   padding: 20px;
-  width: 90%;
+  width: 80%;
   max-width: 400px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-height: 70%; /* Limit height for scrolling */
+  max-height: 46%; /* Limit height for scrolling */
   overflow-y: auto; /* Enable scrolling if content exceeds height */
 }
 
