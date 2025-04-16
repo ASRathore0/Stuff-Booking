@@ -81,60 +81,61 @@
 </section>
  
 <div class="search-container">
-    <div class="search-bar">
-        <button id="toggleButto" class="toggle-butto">
-            <i class="fas fa-chevron-down">  |</i> 
-        </button>
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search your city..."
-            class="search-input"
-            readonly
-        />
-        <span class="geo-btn" onclick="getCurrentLocation()"><i class="fas fa-map-marker-alt"></i></span>
-    </div>
+  <div class="search-bar">
+    <button id="toggleButto" class="toggle-butto">
+      <i class="fas fa-chevron-down"> |</i>
+    </button>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search your city..."
+      class="search-input"
+      oninput="filterCities()"
+      onclick="openCityPopup()"
+    />
+    <span class="geo-btn" onclick="getCurrentLocation()"><i class="fas fa-map-marker-alt"></i></span>
+  </div>
 </div>
 
 <div id="cityPopup" class="city-popup hidden">
-    <div class="popup-header">
-        <p>Currently we are serving in these cities:</p>
-        <button id="closePopup" class="close-popup">&times;</button>
+  <div class="popup-header">
+    <p>Currently we are serving in these cities:</p>
+    <button id="closePopup" class="close-popup" onclick="closeCityPopup()">&times;</button>
+  </div>
+  <div class="city-list" id="cityList">
+    <div class="city-item" data-city="Delhi" onclick="selectCity('Delhi')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Delhi</div>
     </div>
-    <div class="city-list">
-        <div class="city-item" data-city="Delhi">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Delhi</div>
-        </div>
-        <div class="city-item" data-city="Ludhiana">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Ludhiana</div>
-        </div>
-        <div class="city-item" data-city="Khanna">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Khanna</div>
-        </div>
-        <div class="city-item" data-city="Patna">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Patna</div>
-        </div>
-        <div class="city-item" data-city="Siwan">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Siwan</div>
-        </div>
-        <div class="city-item" data-city="Maharajganj">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Maharajganj</div>
-        </div>
-        <div class="city-item" data-city="Gopalganj">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Gopalganj</div>
-        </div>
-        <div class="city-item" data-city="Mirganj">
-            <i class="fas fa-city city-icon"></i>
-            <div class="city-name-container">Mirganj</div>
-        </div>
+    <div class="city-item" data-city="Ludhiana" onclick="selectCity('Ludhiana')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Ludhiana, Punjab</div>
     </div>
+    <div class="city-item" data-city="Khanna" onclick="selectCity('Khanna')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Khanna</div>
+    </div>
+    <div class="city-item" data-city="Patna" onclick="selectCity('Patna')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Patna</div>
+    </div>
+    <div class="city-item" data-city="Siwan" onclick="selectCity('Siwan')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Siwan</div>
+    </div>
+    <div class="city-item" data-city="Maharajganj" onclick="selectCity('Maharajganj')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Maharajganj</div>
+    </div>
+    <div class="city-item" data-city="Gopalganj" onclick="selectCity('Gopalganj')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Gopalganj</div>
+    </div>
+    <div class="city-item" data-city="Mirganj" onclick="selectCity('Mirganj')">
+      <i class="fas fa-city city-icon"></i>
+      <div class="city-name-container">Mirganj</div>
+    </div>
+  </div>
 </div>
  
   <div class="service-categories">
