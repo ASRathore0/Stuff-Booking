@@ -91,78 +91,81 @@
       placeholder="Search your city..."
       class="search-input"
       oninput="filterCities()"
-      onclick="toggleCityPopup()"
-        />
-        <span class="geo-btn" onclick="getCurrentLocation()"><i class="fas fa-map-marker-alt"></i></span>
-      </div>
-        </div>
+      onclick="toggleCityPopup(); scrollIntoViewSmooth()"
+    />
+    <span class="geo-btn" onclick="getCurrentLocation()"><i class="fas fa-map-marker-alt"></i></span>
+  </div>
+</div>
 
-        <div id="cityPopup" class="city-popup hidden">
-      <div class="popup-header">
-        <p>Currently we are serving in these cities:</p>
-        <button id="closePopup" class="close-popup" onclick="toggleCityPopup()">&times;</button>
-      </div>
-      <div class="city-list" id="cityList">
-        <div class="city-item" data-city="Delhi" onclick="selectCity('Delhi')">
+<div id="cityPopup" class="city-popup hidden">
+  <div class="popup-header">
+    <p>Currently we are serving in these cities:</p>
+    <button id="closePopup" class="close-popup" onclick="toggleCityPopup()">&times;</button>
+  </div>
+  <div class="city-list" id="cityList">
+    <div class="city-item" data-city="Delhi" onclick="selectCity('Delhi')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Delhi</div>
-        </div>
-        <div class="city-item" data-city="Ludhiana" onclick="selectCity('Ludhiana')">
+    </div>
+    <div class="city-item" data-city="Ludhiana" onclick="selectCity('Ludhiana')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Ludhiana, Punjab</div>
-        </div>
-        <div class="city-item" data-city="Khanna" onclick="selectCity('Khanna')">
+    </div>
+    <div class="city-item" data-city="Khanna" onclick="selectCity('Khanna')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Khanna</div>
-        </div>
-        <div class="city-item" data-city="Patna" onclick="selectCity('Patna')">
+    </div>
+    <div class="city-item" data-city="Patna" onclick="selectCity('Patna')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Patna</div>
-        </div>
-        <div class="city-item" data-city="Siwan" onclick="selectCity('Siwan')">
+    </div>
+    <div class="city-item" data-city="Siwan" onclick="selectCity('Siwan')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Siwan</div>
-        </div>
-        <div class="city-item" data-city="Maharajganj" onclick="selectCity('Maharajganj')">
+    </div>
+    <div class="city-item" data-city="Maharajganj" onclick="selectCity('Maharajganj')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Maharajganj</div>
-        </div>
-        <div class="city-item" data-city="Gopalganj" onclick="selectCity('Gopalganj')">
+    </div>
+    <div class="city-item" data-city="Gopalganj" onclick="selectCity('Gopalganj')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Gopalganj</div>
-        </div>
-        <div class="city-item" data-city="Mirganj" onclick="selectCity('Mirganj')">
+    </div>
+    <div class="city-item" data-city="Mirganj" onclick="selectCity('Mirganj')">
       <i class="fas fa-city city-icon"></i>
       <div class="city-name-container">Mirganj</div>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
 
-    <script>
-      function toggleCityPopup() {
-        const cityPopup = document.getElementById('cityPopup');
-        cityPopup.classList.toggle('hidden');
-      }
+<script>
+  function toggleCityPopup() {
+    const cityPopup = document.getElementById('cityPopup');
+    cityPopup.classList.toggle('hidden');
+  }
 
-      function filterCities() {
-        const input = document.getElementById('searchInput').value.toLowerCase();
-        const cityItems = document.querySelectorAll('.city-item');
-        cityItems.forEach(item => {
+  function filterCities() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cityItems = document.querySelectorAll('.city-item');
+    cityItems.forEach(item => {
       const cityName = item.getAttribute('data-city').toLowerCase();
       if (cityName.includes(input)) {
         item.style.display = 'flex';
       } else {
         item.style.display = 'none';
       }
-        });
-      }
+    });
+  }
 
-      function selectCity(city) {
-        document.getElementById('searchInput').value = city;
-        toggleCityPopup();
-      }
-    </script>
+  function selectCity(city) {
+    document.getElementById('searchInput').value = city;
+    toggleCityPopup();
+  }
 
+  function scrollIntoViewSmooth() {
+    document.getElementById('searchInput').scrollIntoView({ behavior: "smooth",  block: "start" });
+  }
+</script>
     
   <div class="service-categories">
     <div class="scroll-container">
