@@ -21,6 +21,10 @@ header {
   z-index: 100;
 }
 
+.search-input {
+  scroll-margin-top: 70px; /* Adjust this value to match the height of your header */
+}
+
 main {
   width: 100%;
 }
