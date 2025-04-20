@@ -2486,8 +2486,11 @@ color: #046c9f;
 }
 
 .services-section h2{
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #046c9f;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {
