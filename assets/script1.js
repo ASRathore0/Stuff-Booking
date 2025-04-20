@@ -103,47 +103,54 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // Show matching services when a service box is clicked
-  serviceBoxes.forEach((box) => {
-      box.addEventListener("click", () => {
-          const locationName = searchInput.value.trim();
-          const selectedService = box.getAttribute("data-target");
-          const serviceName = box.querySelector("span").textContent;
+ // Show matching services when a service box is clicked
+serviceBoxes.forEach((box) => {
+    box.addEventListener("click", () => {
+        const locationName = searchInput.value.trim();
+        const selectedService = box.getAttribute("data-target");
+        const serviceName = box.querySelector("span").textContent;
 
-          if (!locationName) {
-              showPopup("Please select a location first!");
-              return;
-          }
+        if (!locationName) {
+            showPopup("Please select a location first!");
+            return;
+        }
 
-          // Update the heading with the selected service and location
-          servicesHeading.textContent = `${serviceName} in ${locationName}`;
+        // Update the heading with the selected service and location
+        servicesHeading.textContent = `${serviceName} in ${locationName}`;
 
-          // Hide all service cards initially
-          serviceCards.forEach((card) => {
-              card.classList.add("hidden");
-          });
+        // Hide all service cards initially
+        serviceCards.forEach((card) => {
+            card.classList.add("hidden");
+        });
 
-          let foundMatch = false;
+        let foundMatch = false;
 
-          // Show matching service cards based on location and service type
-          serviceCards.forEach((card) => {
-              const cardServiceType = card.getAttribute("id");
-              const cardLocation = card.querySelector(".service-details p:nth-child(3)").innerText.trim();
+        // Show matching service cards based on location and service type
+        serviceCards.forEach((card) => {
+            const cardServiceType = card.getAttribute("id");
+            const cardLocation = card.querySelector(".service-details p:nth-child(3)").innerText.trim();
 
-              if (cardServiceType === selectedService && cardLocation.includes(locationName)) {
-                  card.classList.remove("hidden");
-                  foundMatch = true;
-              }
-          });
+            if (cardServiceType === selectedService && cardLocation.includes(locationName)) {
+                card.classList.remove("hidden");
+                foundMatch = true;
+            }
+        });
 
-          if (foundMatch) {
-              // showPopup("Results found for your selection!", "#d4edda", "#155724"); // Green popup
-              servicesSection.scrollIntoView({ behavior: "smooth" });
-          } else {
-              showPopup(`Currently we're unable to serve a ${serviceName}  in ${locationName}. We'll serve soon. Stay tunned!`);
-          }
-      });
-  });
+        if (foundMatch) {
+            // Smooth scroll to the services section, accounting for the header height
+            const headerHeight = document.querySelector("header").offsetHeight; // Get the header height
+            const sectionTop = servicesSection.getBoundingClientRect().top + window.scrollY; // Get the section's position
+            const offsetPosition = sectionTop - headerHeight; // Adjust for the header height
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth", // Smooth scrolling
+            });
+        } else {
+            showPopup(`Currently we're unable to serve a ${serviceName} in ${locationName}. We'll serve soon. Stay tuned!`);
+        }
+    });
+});
 
   // Function to show popup messages
   function showPopup(message, bgColor = "#f8d7da", textColor = "#721c24") {
