@@ -2389,7 +2389,7 @@ color: #046c9f;
 /* City Popup */
 .city-popup {
   position: fixed;
-  top: 58%;
+  top: 41%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f8f9fa;
