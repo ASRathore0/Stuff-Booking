@@ -16,7 +16,12 @@
     <!-- Header Section -->
  <header>
     <div class="logo">BookingYard.in</div>
-    <button class="cta" onclick="showNoticeBoard()">Get App</button>
+    <button class="cta" onclick="downloadApk()">Get App</button>
+    <script>
+      function downloadApk() {
+        window.location.href = '/image/BookingYard.in.apk';
+      }
+    </script>
     <button class="toggle-button" onclick="toggleMenu()">☰</button>
   </header>
    
@@ -148,7 +153,12 @@ Welcome to <strong>"BookingYard.in"</strong>
                   <li><a href="#">Knowledge</a></li>
                   <li><a href="#">Return & Refund</a></li>
                   <li><a href="#">Track Order</a></li>
-                  <li><a href="/assets/support.html">Download App</a></li>
+                  <li><a href="#" style="color: #d1d5db;" onclick="downloadApk()">Download App</a></li>
+                  <script>
+                    function downloadApk() {
+                    window.location.href = '/image/BookingYard.in.apk';
+                    }
+                  </script>
               </ul>
           </div>
         </div>
