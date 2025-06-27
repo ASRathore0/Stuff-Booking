@@ -14,7 +14,6 @@
             font-family: 'Segoe UI', sans-serif;
             background-color: #f2f2f2;
             margin: 0;
-/*             padding: 20px; */
         }
 
         .form-container {
@@ -29,7 +28,7 @@
         .back-button {
             background: none;
             border: none;
-            color: #3498db;
+            color: #046c9f;
             font-size: 1rem;
             cursor: pointer;
             margin-bottom: 10px;
@@ -134,7 +133,7 @@
 
         button[type="submit"] {
             width: 100%;
-            background-color: #3498db;
+            background-color: #046c9f;
             color: white;
             padding: 12px;
             font-size: 1rem;
@@ -163,11 +162,15 @@
 
 <body>
     <div class="form-container">
-        <button class="back-button" onclick="history.back()">← Back</button>
+        <button class="back-button" onclick="history.back()">←Back</button>
         <h2>Edit Your Service</h2>
         <form id="serviceForm">
             <label>Service Name
                 <input type="text" id="serviceName" required />
+            </label>
+
+            <label>Description
+                <input type="text" id="serviceDescription"  />
             </label>
 
             <label>Service Image
@@ -180,7 +183,9 @@
                     <option value="">Select Category</option>
                     <option value="Home Service">Home Service</option>
                     <option value="Event">Event</option>
-                    <option value="Cab">Cab</option>
+                    <option value="Cabs">Cabs</option>
+                    <option value="Hotels">Hotels</option>
+                    <option value="Working Professionals">Working Professionals</option>
                 </select>
             </label>
 
@@ -223,9 +228,11 @@
         const otherServicesList = document.getElementById("otherServicesList");
 
         const serviceOptions = {
-            "Home Service": ["Plumber", "Electrician", "Carpenter"],
-            "Event": ["Sound", "Photographer", "Tent House"],
-            "Cab": ["SUV", "Toto", "Bus"],
+            "Home Service": ["Plumber", "Electrician", "Cleaner", "Gardner", "Painter", "Carpenter", "Pest Control", "Tuition Teacher", "Mineral Water"],
+            "Event": ["Sound", "Photographer", "Catering", "Decorator", "Tent House", "Chef", "Jaimala Stage", "Mineral Water", "Vehicles"],
+            "Cabs": ["Bike", "Toto", "Auto", "Car", "SUV", "Pikup", "Tractor", "Bus", "Other"],
+            "Hotels": ["5-Star", "4-Star", "3-Star", "Motel", "Guest House", "PG", "Rental Room"],
+            "Working Professionals": ["Health and Wellness", "Tutors and Educators", "Technology Services", "Legal and Finance", "Estate Agent", "Beauty and Grooming", "Massage & Spa", "Yoga & Trainer", "Tattoo Artists"],
         };
 
         // Update service dropdown when category changes
