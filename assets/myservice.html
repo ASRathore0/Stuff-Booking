@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Service Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            color: #3498db;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        #imagePreview {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #imagePreview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .add-other-service {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .add-other-service input {
+            flex: 1;
+        }
+
+        .add-other-service button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+
+        .add-other-service button:hover {
+            background-color: #219150;
+        }
+
+        #otherServicesList {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .other-service-item {
+            background: #eee;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+        }
+
+        .other-service-item button {
+            background: #e74c3c;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .add-other-service {
+                flex-direction: column;
+            }
+
+            .other-service-item {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <button class="back-button" onclick="history.back()">← Back</button>
+        <h2>Edit Your Service</h2>
+        <form id="serviceForm">
+            <label>Service Name
+                <input type="text" id="serviceName" required />
+            </label>
+
+            <label>Service Image
+                <input type="file" id="serviceImage" accept="image/*" />
+                <div id="imagePreview"></div>
+            </label>
+
+            <label>Category
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Home Service">Home Service</option>
+                    <option value="Event">Event</option>
+                    <option value="Cab">Cab</option>
+                </select>
+            </label>
+
+            <label>Service
+                <select id="service" required>
+                    <option value="">Select Service</option>
+                </select>
+            </label>
+
+            <label>Other Services
+                <div id="otherServicesList"></div>
+                <div class="add-other-service">
+                    <input type="text" id="otherServiceInput" placeholder="Add other service" />
+                    <button type="button" id="addOtherServiceBtn">Add</button>
+                </div>
+            </label>
+
+            <label>Contact Number
+                <input type="tel" id="contactNumber" required />
+            </label>
+
+            <label>WhatsApp Number
+                <input type="tel" id="whatsappNumber" required />
+            </label>
+
+            <label>Email
+                <input type="email" id="email" required />
+            </label>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <script>
+        const category = document.getElementById("category");
+        const service = document.getElementById("service");
+        const serviceImage = document.getElementById("serviceImage");
+        const imagePreview = document.getElementById("imagePreview");
+        const otherServiceInput = document.getElementById("otherServiceInput");
+        const addOtherServiceBtn = document.getElementById("addOtherServiceBtn");
+        const otherServicesList = document.getElementById("otherServicesList");
+
+        const serviceOptions = {
+            "Home Service": ["Plumber", "Electrician", "Carpenter"],
+            "Event": ["Sound", "Photographer", "Tent House"],
+            "Cab": ["SUV", "Toto", "Bus"],
+        };
+
+        // Update service dropdown when category changes
+        category.addEventListener("change", () => {
+            const selectedCategory = category.value;
+            service.innerHTML = `<option value="">Select Service</option>`;
+            if (serviceOptions[selectedCategory]) {
+                serviceOptions[selectedCategory].forEach((s) => {
+                    const opt = document.createElement("option");
+                    opt.value = s;
+                    opt.textContent = s;
+                    service.appendChild(opt);
+                });
+            }
+        });
+
+        // Show preview on image upload
+        serviceImage.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (evt) {
+                    imagePreview.innerHTML = `<img src="${evt.target.result}" alt="Service Preview">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Add other service
+        addOtherServiceBtn.addEventListener("click", () => {
+            const value = otherServiceInput.value.trim();
+            if (value !== "") {
+                const chip = document.createElement("div");
+                chip.className = "other-service-item";
+                chip.innerHTML = `<span>${value}</span><button type="button">×</button>`;
+                chip.querySelector("button").onclick = () => chip.remove();
+                otherServicesList.appendChild(chip);
+                otherServiceInput.value = "";
+            }
+        });
+
+        // Handle form submission
+        document.getElementById("serviceForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Service details saved successfully!");
+        });
+
+    </script>
+</body>
+
+</html>
